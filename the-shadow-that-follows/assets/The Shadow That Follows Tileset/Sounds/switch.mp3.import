@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhbgjrp5hd6ps"
+path="res://.godot/imported/switch.mp3-4009a7f34baff43f3e098cd42eb1e7df.mp3str"
+
+[deps]
+
+source_file="res://assets/The Shadow That Follows Tileset/Sounds/switch.mp3"
+dest_files=["res://.godot/imported/switch.mp3-4009a7f34baff43f3e098cd42eb1e7df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

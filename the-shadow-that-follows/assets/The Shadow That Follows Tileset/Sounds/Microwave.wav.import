@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://chfi52e4vxls3"
+path="res://.godot/imported/Microwave.wav-0fedac131728b568dffbd958cb658a0d.sample"
+
+[deps]
+
+source_file="res://assets/The Shadow That Follows Tileset/Sounds/Microwave.wav"
+dest_files=["res://.godot/imported/Microwave.wav-0fedac131728b568dffbd958cb658a0d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
