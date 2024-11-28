@@ -1,15 +1,15 @@
 [gd_scene load_steps=6 format=3 uid="uid://chg1g2u2l28bg"]
 
-[ext_resource type="Texture2D" uid="uid://w0k2najst2rh" path="res://assets/The Shadow That Follows Tileset/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character.png" id="1_leabm"]
+[ext_resource type="Texture2D" uid="uid://w0k2najst2rh" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character.png" id="1_leabm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jlst6"]
 size = Vector2(12, 14)
 
-[sub_resource type="Animation" id="Animation_upbx0"]
-resource_name = "walk_right"
-
 [sub_resource type="Animation" id="Animation_lnp0x"]
 length = 0.001
+
+[sub_resource type="Animation" id="Animation_upbx0"]
+resource_name = "walk_right"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lp6fv"]
 _data = {

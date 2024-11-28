@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w0k2najst2rh"
-path="res://.godot/imported/Prototype_Character.png-c2c306f3ca47185ed7fb5f09e9659a19.ctex"
+uid="uid://dgt808gs0c75v"
+path="res://.godot/imported/Prototype_Character_Red.png-d028eac8786b3df7fc6f20423b7d48b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/The Shadow That Follows Tileset/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character.png"
-dest_files=["res://.godot/imported/Prototype_Character.png-c2c306f3ca47185ed7fb5f09e9659a19.ctex"]
+source_file="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character_Red.png"
+dest_files=["res://.godot/imported/Prototype_Character_Red.png-d028eac8786b3df7fc6f20423b7d48b2.ctex"]
 
 [params]
 
