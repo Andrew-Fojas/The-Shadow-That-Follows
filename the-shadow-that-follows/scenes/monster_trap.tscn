@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://dfpgy0mhevo1c"]
+
+[ext_resource type="Texture2D" uid="uid://dt8434u4c7rnk" path="res://assets/Flesh & Bone/Spiketrap.png" id="1_dmlmn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i7sd"]
+atlas = ExtResource("1_dmlmn")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qjmk"]
+atlas = ExtResource("1_dmlmn")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_728xt"]
+atlas = ExtResource("1_dmlmn")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6y8e"]
+atlas = ExtResource("1_dmlmn")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu8oa"]
+atlas = ExtResource("1_dmlmn")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j0sr6"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i7sd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qjmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_728xt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6y8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu8oa")
+}],
+"loop": true,
+"name": &"trap_triggered",
+"speed": 5.0
+}]
+
+[node name="monster_trap" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_j0sr6")
+animation = &"trap_triggered"
+frame_progress = 0.238709
