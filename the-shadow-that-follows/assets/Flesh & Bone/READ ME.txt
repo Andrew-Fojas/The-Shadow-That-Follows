@@ -1,0 +1,12 @@
+Sprite sheet breakdown for enemies.
+Floor Maw
+
+Spawning - Frames 1-8
+Idle - Frames 9-12
+Death -Frames 13-19
+
+Ribbug
+Spawning - Frames 1-7
+Idle - Frames 8-11
+Walking - Frames 12-15
+Death - Frames 16-25
