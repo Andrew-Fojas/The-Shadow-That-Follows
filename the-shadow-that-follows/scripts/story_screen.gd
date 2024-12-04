@@ -81,3 +81,4 @@ func _input(event: InputEvent) -> void:
 			if current_level < _levels.size():
 				get_tree().change_scene_to_file(_levels[current_level])
 				current_level += 1
+				print(current_level)
