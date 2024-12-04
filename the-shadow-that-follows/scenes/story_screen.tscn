@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvpo0keppvdx6"]
+
+[ext_resource type="Script" path="res://scripts/story_screen.gd" id="1_5wkyo"]
+[ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="2_4atqa"]
+[ext_resource type="Texture2D" uid="uid://cpck062yr5bbi" path="res://assets/victory-background.png" id="3_hgprt"]
+
+[node name="StoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wkyo")
+
+[node name="TextLabel" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 58.0
+offset_top = 42.0
+offset_right = 1123.0
+offset_bottom = 579.0
+theme_override_fonts/font = ExtResource("2_4atqa")
+theme_override_font_sizes/font_size = 34
+text = "The air is suffocating now, thick with the weight of the past. This is the heart of your trauma. 
+	This is where it all began. The shadow is no longer hiding. It circles you, taunting, feeding on your fear. 
+	You hear whispers from the past—It was your fault. You deserve this. Your legs tremble, but you keep moving. You have no choice.
+	The exit is ahead, but so is the shadow. To leave this place, you must confront it—accept the truth or let it consume you. 
+	This is your final chance to break free, not just from the facility, but from the chains of your own mind.
+	Will you escape, or will the shadow finally claim you?"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ContinueLabel" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 352.0
+offset_top = 539.0
+offset_right = 828.0
+offset_bottom = 624.0
+theme_override_colors/font_color = Color(0.842635, 3.56168e-06, 4.81307e-07, 1)
+theme_override_fonts/font = ExtResource("2_4atqa")
+theme_override_font_sizes/font_size = 40
+text = "Press [space] to continue..."
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0.360949, 0.360949, 0.360949, 1)
+layout_mode = 0
+offset_right = 1159.0
+offset_bottom = 652.0
+texture = ExtResource("3_hgprt")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
