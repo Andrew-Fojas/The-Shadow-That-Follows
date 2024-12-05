@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://g2tmg4td5b1x"]
+[gd_scene load_steps=8 format=3 uid="uid://g2tmg4td5b1x"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player/player.tscn" id="2_rampw"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="3_e4fvt"]
-[ext_resource type="PackedScene" uid="uid://chc2gg4v4g01x" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" uid="uid://dpbobf1c1kktg" path="res://player.tscn" id="4_ed22l"]
+[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x72s8"]
 texture = ExtResource("1_mlqf1")
@@ -235,6 +236,11 @@ layer_4/tile_data = PackedInt32Array(458755, 196608, 4, 458756, 262144, 4, 45875
 [node name="Player" parent="." instance=ExtResource("2_rampw")]
 script = ExtResource("3_e4fvt")
 
+[node name="Player2" parent="Player" instance=ExtResource("4_ed22l")]
+position = Vector2(8, 17)
+animation = &"idle"
+frame_progress = 0.0858984
+
 [node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
@@ -242,4 +248,3 @@ position = Vector2(10, 158)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
-color = Color(0, 0, 0, 1)
