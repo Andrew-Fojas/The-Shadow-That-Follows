@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://chc2gg4v4g01x"]
+[gd_scene load_steps=7 format=3 uid="uid://chc2gg4v4g01x"]
 
 [ext_resource type="Texture2D" uid="uid://bilbmnpdwkhk3" path="res://assets/Placeholder_Torch-Sprites/smalltorch1.png" id="1_vnxvb"]
+[ext_resource type="Script" path="res://scripts/torch.gd" id="1_wfwud"]
 [ext_resource type="Texture2D" uid="uid://be52fnup8gn5k" path="res://assets/Placeholder_Torch-Sprites/smalltorch2.png" id="2_f5rma"]
 [ext_resource type="Texture2D" uid="uid://cfxn5sl3e7b5l" path="res://assets/Placeholder_Torch-Sprites/smalltorch3.png" id="3_h385p"]
 [ext_resource type="Texture2D" uid="uid://cyj6owje6xajc" path="res://assets/light.png" id="4_uylk2"]
@@ -23,11 +24,12 @@ animations = [{
 }]
 
 [node name="Torch" type="Node2D"]
+script = ExtResource("1_wfwud")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8eug3")
 animation = &"flame"
-frame_progress = 0.685741
+frame_progress = 0.612666
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(0, 1)
