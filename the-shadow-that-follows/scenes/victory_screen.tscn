@@ -1,0 +1,110 @@
+[gd_scene load_steps=10 format=3 uid="uid://dlgp6ep7uxfif"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_heh3q"]
+[ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="2_elp5v"]
+[ext_resource type="Texture2D" uid="uid://cpck062yr5bbi" path="res://assets/victory-background.png" id="3_q0ek1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prp81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jj2fv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_756pf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tdrye"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l8fwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_60uh7"]
+
+[node name="VictoryScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_heh3q")
+
+[node name="Title" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = 8.0
+offset_right = 1143.0
+offset_bottom = 122.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0, 0.87, 0.1305, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_fonts/font = ExtResource("2_elp5v")
+theme_override_font_sizes/font_size = 70
+text = "You escaped!"
+horizontal_alignment = 1
+
+[node name="TextLabel" type="Label" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 42.0
+offset_top = 105.0
+offset_right = 1167.0
+offset_bottom = 324.0
+theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_fonts/font = ExtResource("2_elp5v")
+theme_override_font_sizes/font_size = 50
+text = "You take a deep breath of freedom,
+leaving behind the darkness of the facility.
+Will your past haunt you again?"
+horizontal_alignment = 1
+
+[node name="Play Again" type="Button" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 435.0
+offset_top = 299.0
+offset_right = 747.0
+offset_bottom = 378.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0.0166664, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0.0156863, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.0156863, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_elp5v")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/focus = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jj2fv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_756pf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_756pf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tdrye")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tdrye")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l8fwl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_60uh7")
+text = "Play Again"
+icon_alignment = 1
+
+[node name="Background" type="TextureRect" parent="."]
+self_modulate = Color(0.65218, 0.65218, 0.65218, 1)
+layout_mode = 0
+offset_left = 1.0
+offset_right = 1160.0
+offset_bottom = 652.0
+texture = ExtResource("3_q0ek1")
+expand_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 326)
+
+[connection signal="button_down" from="Play Again" to="." method="_on_start_game_button_down"]
+[connection signal="pressed" from="Play Again" to="." method="_on_start_game_pressed"]

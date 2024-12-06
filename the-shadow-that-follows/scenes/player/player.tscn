@@ -1,16 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkek1m8avaq7m"]
 
-[ext_resource type="PackedScene" uid="uid://dpbobf1c1kktg" path="res://player.tscn" id="1_2gl12"]
+[ext_resource type="Texture2D" uid="uid://cyj6owje6xajc" path="res://assets/light.png" id="2_sk6cf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoqx"]
 size = Vector2(10, 14)
 
 [node name="Player" type="CharacterBody2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_2gl12")]
-position = Vector2(8, 17)
-animation = &"walk_down"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(8, 17)
 shape = SubResource("RectangleShape2D_ixoqx")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(8, 17)
+energy = 0.5
+texture = ExtResource("2_sk6cf")
+texture_scale = 0.2
