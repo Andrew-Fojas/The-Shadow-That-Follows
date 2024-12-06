@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://g2tmg4td5b1x"]
+[gd_scene load_steps=9 format=3 uid="uid://g2tmg4td5b1x"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player/player.tscn" id="2_rampw"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="3_e4fvt"]
-[ext_resource type="PackedScene" uid="uid://dpbobf1c1kktg" path="res://player.tscn" id="4_ed22l"]
-[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
+[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x72s8"]
 texture = ExtResource("1_mlqf1")
@@ -236,15 +237,33 @@ layer_4/tile_data = PackedInt32Array(458755, 196608, 4, 458756, 262144, 4, 45875
 [node name="Player" parent="." instance=ExtResource("2_rampw")]
 script = ExtResource("3_e4fvt")
 
-[node name="Player2" parent="Player" instance=ExtResource("4_ed22l")]
+[node name="Player2" parent="Player"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 position = Vector2(8, 17)
 animation = &"idle"
 frame_progress = 0.0858984
+script = null
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="BossMonster" parent="Player" instance=ExtResource("5_t6f1d")]
+position = Vector2(212, 22)
+scale = Vector2(0.708333, 0.6875)
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
 position = Vector2(10, 158)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+
+[node name="SpikeTrap" parent="." instance=ExtResource("4_lw3o3")]
+position = Vector2(24, 136)
+scale = Vector2(0.5625, 0.5625)
