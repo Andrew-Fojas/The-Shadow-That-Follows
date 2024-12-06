@@ -35,8 +35,6 @@ func _process(delta):
 	var distance_to_torch = global_position.distance_to(torch_position)
 	if distance_to_torch <= torch_trigger_distance:
 		point_light.texture_scale = spotlight_scale_widened
-	else:
-		point_light.texture_scale = spotlight_scale_default
 
 func _physics_process(delta):
 	var current_speed = speed
