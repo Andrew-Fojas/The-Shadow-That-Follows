@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: int = 50
-@export var dash_speed: int = 400
+@export var dash_speed: int = 500
 @export var dash_duration: float = 0.2
 @export var dash_cooldown: float = 5.0
 @export var spotlight_scale_default: float = 0.2
@@ -67,4 +67,4 @@ func _physics_process(delta):
 	elif direction.y > 0:
 		animation_player.play("walk_down")
 	elif direction.y < 0:
-		animation_player.play("walk_top")
+		animation_player.play("walk_up")
