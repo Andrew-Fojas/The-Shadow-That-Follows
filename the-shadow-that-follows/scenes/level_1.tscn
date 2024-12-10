@@ -391,12 +391,10 @@ platform_wall_layers = 2
 script = ExtResource("7_mv4mj")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("5_t6f1d")]
-scale = Vector2(1, 1)
 animation = &"reaper_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0.0588379, 0.72727)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0xe60")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Enemy"]
