@@ -1,14 +1,16 @@
-[gd_scene load_steps=52 format=3 uid="uid://g2tmg4td5b1x"]
+[gd_scene load_steps=59 format=3 uid="uid://g2tmg4td5b1x"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player/player.tscn" id="2_rampw"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="3_e4fvt"]
-[ext_resource type="PackedScene" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
-[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
+[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
 [ext_resource type="Texture2D" uid="uid://w0k2najst2rh" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character.png" id="5_essd2"]
-[ext_resource type="PackedScene" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
+[ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
+[ext_resource type="Texture2D" uid="uid://dgt808gs0c75v" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character_Red.png" id="5_xsw3y"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="7_mv4mj"]
 [ext_resource type="Script" path="res://scenes/TransitionZone.gd" id="9_roegv"]
+[ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="11_tkisu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x72s8"]
 texture = ExtResource("1_mlqf1")
@@ -320,6 +322,26 @@ region = Rect2(0, 0, 32, 32)
 atlas = ExtResource("5_essd2")
 region = Rect2(32, 0, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_j15qf"]
+atlas = ExtResource("5_essd2")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hec16"]
+atlas = ExtResource("5_essd2")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srjqi"]
+atlas = ExtResource("5_xsw3y")
+region = Rect2(32, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uekrv"]
+atlas = ExtResource("5_essd2")
+region = Rect2(0, 192, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jxnq"]
+atlas = ExtResource("5_essd2")
+region = Rect2(32, 192, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_01coa"]
 atlas = ExtResource("5_essd2")
 region = Rect2(0, 96, 32, 32)
@@ -466,6 +488,26 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_j15qf")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_hec16")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_srjqi")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_uekrv")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_5jxnq")
+}],
+"loop": true,
+"name": &"take_damage",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_01coa")
 }, {
@@ -551,9 +593,8 @@ zoom = Vector2(7, 7)
 [node name="Player2" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(8, 17)
 sprite_frames = SubResource("SpriteFrames_sada1")
-animation = &"dash_up"
-frame = 3
-frame_progress = 0.0513567
+animation = &"take_damage"
+frame_progress = 0.318895
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
 position = Vector2(10, 158)
@@ -588,5 +629,49 @@ next_scene = "res://scenes/story_screen.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone"]
 position = Vector2(312, 168)
 shape = SubResource("RectangleShape2D_lu7bb")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Health" type="Panel" parent="UI"]
+offset_right = 313.0
+offset_bottom = 75.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Health"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 4.0
+offset_right = 315.0
+offset_bottom = 64.0
+alignment = 1
+
+[node name="Heart1" type="TextureRect" parent="UI/Health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_tkisu")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/Health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_tkisu")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/Health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_tkisu")
+expand_mode = 2
+
+[node name="Heart4" type="TextureRect" parent="UI/Health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_tkisu")
+expand_mode = 2
+
+[node name="Heart5" type="TextureRect" parent="UI/Health/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("11_tkisu")
+expand_mode = 2
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]
