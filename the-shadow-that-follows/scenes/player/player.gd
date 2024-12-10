@@ -67,4 +67,4 @@ func _physics_process(delta):
 	elif direction.y > 0:
 		animation_player.play("walk_down")
 	elif direction.y < 0:
-		animation_player.play("walk_up")
+		animation_player.play("walk_top")

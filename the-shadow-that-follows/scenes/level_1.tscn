@@ -356,11 +356,6 @@ layer_3/tile_data = PackedInt32Array(327674, 196608, 8, 327673, 0, 8, 393209, 65
 layer_4/name = "Decor2"
 layer_4/tile_data = PackedInt32Array(458755, 196608, 4, 458756, 262144, 4, 458759, 458752, 4, 458760, 524288, 4, 589820, 983040, 5, 655356, 983040, 6, 458749, 655360, 9, 327682, 655360, 9, 393219, 458752, 9, 524296, 458752, 9, 917505, 458752, 9, 1245186, 655360, 9, 524284, 720896, 4, 1376259, 786432, 11, 327698, 655360, 9, 524306, 655360, 9, 393233, 589824, 9, 393234, 458752, 9, 524304, 524288, 9, 131081, 851968, 4, 131082, 917504, 4, 131083, 983040, 4, 65545, 851968, 3, 65546, 917504, 3, 65547, 983040, 3, 18, 458752, 9, -131054, 524288, 9)
 
-[node name="BossMonster" parent="TileMap" instance=ExtResource("5_t6f1d")]
-position = Vector2(212, 22)
-scale = Vector2(0.708333, 0.6875)
-frame_progress = 0.0475285
-
 [node name="Player" parent="." instance=ExtResource("2_rampw")]
 script = ExtResource("3_e4fvt")
 
@@ -383,3 +378,8 @@ scale = Vector2(1, 0.407709)
 [node name="SpikeTrap" parent="." instance=ExtResource("4_lw3o3")]
 position = Vector2(24, 136)
 scale = Vector2(0.5625, 0.5625)
+
+[node name="BossMonster" parent="." instance=ExtResource("5_t6f1d")]
+position = Vector2(212, 22)
+scale = Vector2(0.708333, 0.6875)
+frame_progress = 0.0475285
