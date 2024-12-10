@@ -6,7 +6,7 @@ extends Control
 var full_text: String = ""
 var current_char_index: int = 0
 var is_typing: bool = false
-# var current_level: int = 0
+var current_level: int = 0
 # Narrative texts for each level
 var _narratives : Array = [
 	"    The soft hum of your light echoes in your ears as you wake in the dim room of the mental facility. 
@@ -43,7 +43,7 @@ var next_level_scene : String
 
 
 func _ready() -> void:
-	set_text(_narratives[GameData.current_level])
+	set_text(_narratives[current_level])
 
 # Set text to display in story scene
 func set_text(new_text: String) -> void:
@@ -78,7 +78,7 @@ func _input(event: InputEvent) -> void:
 			is_typing = false
 		else:
 			# Transition to next scene
-			if GameData.current_level < _levels.size():
-				get_tree().change_scene_to_file(_levels[GameData.current_level])
-				GameData.current_level += 1
-				print(GameData.current_level)
+			if current_level < _levels.size():
+				get_tree().change_scene_to_file(_levels[current_level])
+				current_level += 1
+				print(current_level)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://d1t53rpn7yuj1"]
+[gd_scene load_steps=4 format=3 uid="uid://dvpo0keppvdx6"]
 
 [ext_resource type="Script" path="res://scripts/story_screen.gd" id="1_5wkyo"]
 [ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="2_4atqa"]
