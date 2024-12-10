@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var spotlight_scale_default: float = 0.2
 @export var spotlight_scale_widened: float = 0.4
 @export var torch_trigger_distance: float = 20.0
+@export var health: int = 5
 
 var direction: Vector2 = Vector2.ZERO
 var is_dashing: bool = false
@@ -67,4 +68,4 @@ func _physics_process(delta):
 	elif direction.y > 0:
 		animation_player.play("walk_down")
 	elif direction.y < 0:
-		animation_player.play("walk_up")
+		animation_player.play("walk_top")
