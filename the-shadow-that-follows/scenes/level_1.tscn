@@ -561,3 +561,5 @@ position = Vector2(8, 17)
 position = Vector2(204, 5)
 scale = Vector2(0.708333, 0.6875)
 frame_progress = 0.0475285
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
