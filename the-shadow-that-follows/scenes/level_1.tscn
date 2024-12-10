@@ -278,6 +278,93 @@ region = Rect2(96, 160, 32, 32)
 [sub_resource type="SpriteFrames" id="SpriteFrames_sada1"]
 animations = [{
 "frames": [{
+<<<<<<< Updated upstream
+=======
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_krffe")
+}, {
+"duration": 0.4,
+"texture": SubResource("AtlasTexture_bgmo8")
+}, {
+"duration": 0.8,
+"texture": SubResource("AtlasTexture_mjc2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b8186")
+}, {
+"duration": 5.0,
+"texture": SubResource("AtlasTexture_4cfpt")
+}, {
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_804qn")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_x1c1o")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_pqy1s")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_uckib")
+}],
+"loop": true,
+"name": &"dash_down",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_uby5j")
+}, {
+"duration": 0.3,
+"texture": SubResource("AtlasTexture_dufbf")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_cevrd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qyun")
+}, {
+"duration": 7.0,
+"texture": SubResource("AtlasTexture_1dv8w")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_47d78")
+}, {
+"duration": 4.5,
+"texture": SubResource("AtlasTexture_ur5ri")
+}, {
+"duration": 4.5,
+"texture": SubResource("AtlasTexture_4vs2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pab34")
+}],
+"loop": true,
+"name": &"dash_right",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_t8oue")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_f8ww8")
+}, {
+"duration": 6.5,
+"texture": SubResource("AtlasTexture_ayspb")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_hkjky")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_fuj1n")
+}],
+"loop": true,
+"name": &"dash_up",
+"speed": 15.0
+}, {
+"frames": [{
+>>>>>>> Stashed changes
 "duration": 2.0,
 "texture": SubResource("AtlasTexture_yusf1")
 }, {
@@ -366,13 +453,17 @@ script = ExtResource("3_e4fvt")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(8, 14)
-zoom = Vector2(7, 7)
+zoom = Vector2(2, 2)
 
 [node name="Player2" type="AnimatedSprite2D" parent="Player"]
 position = Vector2(8, 17)
 sprite_frames = SubResource("SpriteFrames_sada1")
+<<<<<<< Updated upstream
 animation = &"idle"
 frame_progress = 0.865097
+=======
+animation = &"dash_right"
+>>>>>>> Stashed changes
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
 position = Vector2(10, 158)
