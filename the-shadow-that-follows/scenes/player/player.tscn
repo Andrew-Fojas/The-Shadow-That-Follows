@@ -8,11 +8,9 @@ size = Vector2(10, 14)
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 17)
 shape = SubResource("RectangleShape2D_ixoqx")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(8, 17)
 energy = 0.5
 texture = ExtResource("2_sk6cf")
 texture_scale = 0.2

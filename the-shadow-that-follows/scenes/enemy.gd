@@ -10,7 +10,7 @@ var target_pos: Vector2
 @onready var player = get_parent().get_node("Player")
 @onready var animation_enemy = $BossMonster
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	player_pos = player.position
 	target_pos = (player_pos - position).normalized()
 

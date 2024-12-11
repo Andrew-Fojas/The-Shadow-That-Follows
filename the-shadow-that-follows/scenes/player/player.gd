@@ -7,16 +7,19 @@ extends CharacterBody2D
 @export var spotlight_scale_default: float = 0.2
 @export var spotlight_scale_widened: float = 0.4
 @export var torch_trigger_distance: float = 20.0
+@export var player_hit: bool = false
 @export var health: int = 5
 
 var direction: Vector2 = Vector2.ZERO
 var is_dashing: bool = false
 var dash_timer: float = 0.0
 var cooldown_timer: float = 0.0
+var player_hit_movement_timer: float = 0.0
 
 @onready var torch_position: Vector2 = Vector2.ZERO
 @onready var point_light = $PointLight2D
 @onready var animation_player = $Player2
+@onready var Health_UI = $"../UI/Health/HBoxContainer"
 
 func _ready():
 	var torch_node = get_node("../Torch")  
@@ -30,7 +33,30 @@ func _process(delta):
 		if cooldown_timer < 0:
 			cooldown_timer = 0  
 
-	direction = Input.get_vector("left", "right", "up", "down")
+	if player_hit_movement_timer > 0:
+		player_hit_movement_timer -= delta
+	else:
+		if player_hit_movement_timer < 0:
+			player_hit_movement_timer = 0  
+
+	if player_hit:
+		print(player_hit)
+		direction = Vector2.ZERO
+		health -= 1
+		if health in range(1, 5):
+			var heart = Health_UI.get_node("Heart%d" % (health + 1))
+			heart.visible = false
+			animation_player.play("take_damage")
+		elif health <= 0:
+			# game over (health at 0) 
+			# implement whatever needs to happen here 
+			# bc idk what should happen lmao :(
+			pass
+
+		player_hit_movement_timer = 1
+		player_hit = false
+	else:
+		direction = Input.get_vector("left", "right", "up", "down")
 	
 	# Spotlight scaling logic
 	var distance_to_torch = global_position.distance_to(torch_position)
@@ -38,6 +64,13 @@ func _process(delta):
 		point_light.texture_scale = spotlight_scale_widened
 
 func _physics_process(delta):
+	# Disable movement and dashing if the player is hit
+	if player_hit_movement_timer > 0:
+		velocity = Vector2.ZERO
+		move_and_slide()
+		# Skip the rest of the logic
+		return  
+
 	var current_speed = speed
 
 	# Handle dashing

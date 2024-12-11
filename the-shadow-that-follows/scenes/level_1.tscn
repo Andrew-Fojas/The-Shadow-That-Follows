@@ -581,28 +581,26 @@ layer_3/tile_data = PackedInt32Array(327674, 196608, 8, 327673, 0, 8, 393209, 65
 layer_4/name = "Decor2"
 layer_4/tile_data = PackedInt32Array(458755, 196608, 4, 458756, 262144, 4, 458759, 458752, 4, 458760, 524288, 4, 589820, 983040, 5, 655356, 983040, 6, 458749, 655360, 9, 327682, 655360, 9, 393219, 458752, 9, 524296, 458752, 9, 917505, 458752, 9, 1245186, 655360, 9, 524284, 720896, 4, 1376259, 786432, 11, 327698, 655360, 9, 524306, 655360, 9, 393233, 589824, 9, 393234, 458752, 9, 524304, 524288, 9, 131081, 851968, 4, 131082, 917504, 4, 131083, 983040, 4, 65545, 851968, 3, 65546, 917504, 3, 65547, 983040, 3, 18, 458752, 9, -131054, 524288, 9)
 
+[node name="Node2D" parent="." instance=ExtResource("4_lw3o3")]
+position = Vector2(20, 115)
+
 [node name="Player" parent="." instance=ExtResource("2_rampw")]
+position = Vector2(8, 19)
 collision_mask = 2
 script = ExtResource("3_e4fvt")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(8, 14)
 zoom = Vector2(7, 7)
 
 [node name="Player2" type="AnimatedSprite2D" parent="Player"]
-position = Vector2(8, 17)
 sprite_frames = SubResource("SpriteFrames_sada1")
-animation = &"walk_up"
+animation = &"take_damage"
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
 position = Vector2(10, 158)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
-
-[node name="SpikeTrap" parent="." instance=ExtResource("4_lw3o3")]
-position = Vector2(24, 136)
-scale = Vector2(0.5625, 0.5625)
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(212, 22)
@@ -612,7 +610,6 @@ script = ExtResource("7_mv4mj")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("5_t6f1d")]
 animation = &"reaper_attack_running"
-frame_progress = 0.102966
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0.0588379, 0.72727)
@@ -622,6 +619,7 @@ shape = SubResource("RectangleShape2D_0xe60")
 path_postprocessing = 1
 
 [node name="ExitZone" type="Area2D" parent="."]
+position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone"]
 position = Vector2(312, 168)
@@ -630,8 +628,12 @@ shape = SubResource("RectangleShape2D_lu7bb")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Health" type="Panel" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -63.0
 offset_right = 313.0
-offset_bottom = 75.0
+grow_vertical = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Health"]
 layout_mode = 0
