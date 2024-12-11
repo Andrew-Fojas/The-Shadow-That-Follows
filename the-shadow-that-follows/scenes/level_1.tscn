@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://g2tmg4td5b1x"]
+[gd_scene load_steps=58 format=3 uid="uid://g2tmg4td5b1x"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player/player.tscn" id="2_rampw"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 [ext_resource type="Texture2D" uid="uid://dgt808gs0c75v" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character_Red.png" id="5_xsw3y"]
 [ext_resource type="Script" path="res://scenes/enemy.gd" id="7_mv4mj"]
-[ext_resource type="Script" path="res://scenes/TransitionZone.gd" id="9_roegv"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="11_tkisu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x72s8"]
@@ -623,8 +622,6 @@ shape = SubResource("RectangleShape2D_0xe60")
 path_postprocessing = 1
 
 [node name="ExitZone" type="Area2D" parent="."]
-script = ExtResource("9_roegv")
-next_scene = "res://scenes/story_screen.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone"]
 position = Vector2(312, 168)

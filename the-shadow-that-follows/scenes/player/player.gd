@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @export var speed: int = 50
-@export var dash_speed: int = 500
-@export var dash_duration: float = 0.2
+@export var dash_speed: int = 300
+@export var dash_duration: float = 0.5
 @export var dash_cooldown: float = 5.0
 @export var spotlight_scale_default: float = 0.2
 @export var spotlight_scale_widened: float = 0.4
@@ -39,9 +39,21 @@ func _process(delta):
 
 func _physics_process(delta):
 	var current_speed = speed
-	
+
 	# Handle dashing
 	if Input.is_action_just_pressed("space") and cooldown_timer <= 0:
+		if direction.x > 0:
+			animation_player.flip_h = false
+			animation_player.play("dash_right")
+		elif direction.x < 0:
+			animation_player.flip_h = true
+			animation_player.play("dash_right")
+		elif direction.y > 0:
+			animation_player.play("dash_down")
+		elif direction.y < 0:
+			animation_player.play("dash_up")
+		else:
+			animation_player.play("dash_generic")  # For diagonal dashes
 		is_dashing = true
 		dash_timer = dash_duration
 		cooldown_timer = dash_cooldown
@@ -51,21 +63,23 @@ func _physics_process(delta):
 		dash_timer -= delta
 		if dash_timer <= 0:
 			is_dashing = false
+			animation_player.play("idle")
 
 	# Move the character
 	velocity = direction * current_speed
 	move_and_slide()
 
-	# Update animations
-	if direction == Vector2.ZERO:
-		animation_player.play("idle")
-	elif direction.x > 0:
-		animation_player.flip_h = false
-		animation_player.play("walk_right")
-	elif direction.x < 0:
-		animation_player.flip_h = true
-		animation_player.play("walk_right")
-	elif direction.y > 0:
-		animation_player.play("walk_down")
-	elif direction.y < 0:
-		animation_player.play("walk_top")
+	# Update animations if not dashing
+	if not is_dashing:
+		if direction == Vector2.ZERO:
+			animation_player.play("idle")
+		elif direction.x > 0:
+			animation_player.flip_h = false
+			animation_player.play("walk_right")
+		elif direction.x < 0:
+			animation_player.flip_h = true
+			animation_player.play("walk_right")
+		elif direction.y > 0:
+			animation_player.play("walk_down")
+		elif direction.y < 0:
+			animation_player.play("walk_up")
