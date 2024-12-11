@@ -612,7 +612,8 @@ platform_wall_layers = 2
 script = ExtResource("7_mv4mj")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("5_t6f1d")]
-animation = &"reaper_idle"
+animation = &"reaper_attack_running"
+frame_progress = 0.102966
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0.0588379, 0.72727)
