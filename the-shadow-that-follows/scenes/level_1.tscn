@@ -611,7 +611,7 @@ text = "00:00"
 
 [node name="Player2" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = SubResource("SpriteFrames_sada1")
-animation = &"take_damage"
+animation = &"dash_up"
 
 [node name="Torch" parent="." instance=ExtResource("4_txh2o")]
 position = Vector2(10, 158)

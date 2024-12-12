@@ -35,6 +35,7 @@ func update_timer_display():
 		timer_label.add_theme_color_override("font_color", Color.WHITE)
 
 func game_over():
+	GameData.current_level = 0 
 	get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 
 # Optional: Reset timer
