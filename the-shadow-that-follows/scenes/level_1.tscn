@@ -596,6 +596,7 @@ zoom = Vector2(7, 7)
 script = ExtResource("5_0fioc")
 
 [node name="TimerLabel" type="Label" parent="Player/Camera2D"]
+texture_filter = 2
 offset_left = 54.0
 offset_top = 37.0
 offset_right = 85.0
@@ -604,6 +605,7 @@ theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("6_613ew")
+theme_override_font_sizes/font_size = 16
 text = "00:00"
 
 [node name="Player2" type="AnimatedSprite2D" parent="Player"]

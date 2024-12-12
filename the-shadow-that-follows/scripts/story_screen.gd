@@ -14,7 +14,7 @@ var _narratives : Array = [
 	muffled screams, the weight of guilt.
 	Then you hear it. A faint, guttural whisper. Your heart races. Shadows flicker unnaturally on the walls, 
 	twisting and shifting like they have a mind of their own. It’s back. The same shadow that haunted your dreams now lurks in reality.
-	You have to leave. Tonight. Before it finds you.",
+	You have to leave. Tonight. Before time runs out.",
 	
 	"The cold, sterile air grows heavier as you descend into the facility.
 	Your mind whispers doubts, 

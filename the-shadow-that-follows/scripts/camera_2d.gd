@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var total_time: float = 60.0
+@export var total_time: float = 10.0
 
 var time_remaining: float = 0.0
 
@@ -27,15 +27,15 @@ func _process(delta):
 
 func update_timer_display():
 	# Format time
-	var minutes = floor(time_remaining / 60)
-	var seconds = floor(fmod(time_remaining, 60))
+	var minutes : float = floor(time_remaining / 60)
+	var seconds : float = floor(fmod(time_remaining, 60))
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
-	# Optional: Change color as time gets low
+	# Change color as time gets low
 	if time_remaining <= 10:
-		timer_label.add_theme_color_override("font_color", Color.RED)
+		timer_label.add_theme_color_override("font_color", Color.WHITE)
 
 func game_over():
-	get_tree().change_scene_to_file("res://game_over_scene.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 
 # Optional: Reset timer
 func reset_timer():

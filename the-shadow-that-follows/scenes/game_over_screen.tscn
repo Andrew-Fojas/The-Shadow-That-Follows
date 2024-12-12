@@ -95,7 +95,7 @@ text = "Play Again"
 icon_alignment = 1
 
 [node name="Background" type="TextureRect" parent="."]
-self_modulate = Color(0.65218, 0.65218, 0.65218, 1)
+self_modulate = Color(0.228511, 0.228511, 0.228511, 1)
 layout_mode = 0
 offset_right = 1159.0
 offset_bottom = 652.0
