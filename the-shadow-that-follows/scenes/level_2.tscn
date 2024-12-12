@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://sfw40uso165j"]
+[gd_scene load_steps=15 format=3 uid="uid://sfw40uso165j"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_4sopn"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="2_ccx4i"]
@@ -223,6 +223,8 @@ size = Vector2(19.8824, 30.5455)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfg2a"]
 size = Vector2(2, 48)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7xwen"]
+
 [node name="Level2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -289,6 +291,7 @@ anchor_bottom = 1.0
 offset_top = -63.0
 offset_right = 313.0
 grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_7xwen")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Health"]
 layout_mode = 0
