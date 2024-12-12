@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="2_jxgoa"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_54lu2"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="8_8olqd"]
-[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="9_2eq6q"]
+[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="9_2eq6q"]
 [ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="9_i1k13"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="10_bqii3"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="13_g72fg"]
@@ -248,7 +248,6 @@ position = Vector2(269, 45)
 
 [node name="Player" parent="." instance=ExtResource("2_ccx4i")]
 position = Vector2(368, 105)
-collision_mask = 2
 script = ExtResource("3_54lu2")
 
 [node name="Torch" parent="." instance=ExtResource("9_2eq6q")]
@@ -330,5 +329,17 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("13_g72fg")
 expand_mode = 2
+
+[node name="collisions_level_2" type="StaticBody2D" parent="."]
+
+[node name="walls" type="CollisionPolygon2D" parent="collisions_level_2"]
+build_mode = 1
+polygon = PackedVector2Array(-16, -17, 32, -17, 32, -6, 49, -6, 49, -16, 95, -17, 95, -95, 64, -95, 64, -176, 81, -176, 81, -160, 95, -160, 95, -176, 128, -176, 128, -161, 160, -161, 160, -176, 191, -177, 192, -160, 208, -160, 208, -95, 144, -96, 144, -17, 160, -16, 160, 0, 176, 0, 176, -16, 192, -16, 195, -7, 205, -7, 210, -16, 257, -16, 256, -96, 272, -96, 272, -80, 288, -80, 288, -96, 304, -96, 304, -63, 321, -64, 323, -56, 333, -55, 337, -64, 352, -64, 352, -143, 304, -142, 305, -207, 319, -208, 319, -193, 336, -192, 336, -207, 399, -208, 399, -191, 416, -192, 416, -208, 431, -208, 432, -111, 417, -111, 417, -95, 431, -95, 431, -32, 304, -32, 304, 80, 336, 81, 336, 49, 356, 49, 356, 76, 382, 76, 381, 48, 394, 48, 394, 62, 406, 62, 405, 48, 447, 48, 448, 59, 415, 59, 416, 129, 416, 143, 448, 144, 448, 159, 336, 160, 336, 129, 305, 129, 305, 209, 256, 210, 255, 31, 143, 32, 143, 114, 162, 113, 163, 121, 172, 121, 175, 113, 192, 113, 192, 166, 192, 224, -97, 224, -96, 128, -81, 127, -79, 112, -62, 112, -62, 128, -35, 128, -32, 193, 31, 193, 48, 193, 47, 179, 43, 175, 33, 175, 32, 112, 46, 112, 48, 117, 81, 117, 81, 112, 95, 112, 96, 32, -36, 33, -36, -16)
+
+[node name="table_collision" type="CollisionPolygon2D" parent="collisions_level_2"]
+polygon = PackedVector2Array(114, -144, 114, -129, 116, -129, 116, -124, 122, -124, 122, -129, 167, -129, 167, -125, 172, -125, 172, -129, 174, -129, 174, -143)
+
+[node name="bed_collision" type="CollisionPolygon2D" parent="collisions_level_2"]
+polygon = PackedVector2Array(148, 166, 188, 165, 189, 188, 149, 187, 149, 167)
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="2_rampw"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_e4fvt"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
-[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="4_txh2o"]
 [ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="7_mv4mj"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="11_tkisu"]
@@ -266,7 +266,6 @@ script = ExtResource("7_mv4mj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0.0588379, 0.72727)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_0xe60")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("5_t6f1d")]
@@ -338,7 +337,7 @@ expand_mode = 2
 
 [node name="level bounda" type="CollisionPolygon2D" parent="Collisions"]
 build_mode = 1
-polygon = PackedVector2Array(-80, 64, -80, -16, -65, -16, -64, 0, -33, -1, -32, -16, 51, -16, 52, 12, 76, 12, 76, -17, 96, -17, 97, 62, 32, 63, 32, 143, 159, 144, 159, 65, 128, 65, 128, -1, 208, 0, 208, 16, 224, 16, 303, 17, 304, 62, 210, 63, 208, 143, 321, 143, 321, 193, -30, 193, -32, 272, -17, 272, -17, 276, 17, 277, 16, 271, 31, 271, 31, 304, 16, 304, 16, 319, 29, 319, 30, 352, 49, 352, 51, 361, 58, 361, 64, 353, 78, 353, 79, 400, -113, 401, -111, 271, -80, 271, -80, 191, -95, 191, -95, 142, -65, 142, -63, 153, -51, 153, -46, 145, -16, 145, -15, 64)
+polygon = PackedVector2Array(-80, 64, -80, -16, -65, -16, -64, 0, -33, -1, -32, -16, 51, -16, 52, 12, 76, 12, 76, -17, 96, -17, 97, 62, 32, 63, 32, 143, 159, 144, 159, 65, 128, 65, 128, -1, 208, 0, 208, 16, 224, 16, 303, 17, 304, 62, 210, 63, 208, 143, 329, 143, 328, 193, -30, 193, -32, 272, -17, 272, -17, 276, 17, 277, 16, 271, 31, 271, 31, 304, 16, 304, 16, 319, 29, 319, 30, 352, 49, 352, 51, 361, 58, 361, 64, 353, 78, 353, 79, 400, -113, 401, -111, 271, -80, 271, -80, 191, -95, 191, -95, 142, -65, 142, -63, 153, -51, 153, -46, 145, -16, 145, -15, 64)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(147, 16, 189, 16, 189, 31, 187, 35, 183, 35, 182, 32, 153, 32, 153, 35, 149, 35, 149, 31, 146, 31)
