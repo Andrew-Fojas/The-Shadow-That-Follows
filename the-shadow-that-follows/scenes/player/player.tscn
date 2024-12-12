@@ -3,11 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://cyj6owje6xajc" path="res://assets/light.png" id="2_sk6cf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoqx"]
-size = Vector2(10, 14)
+size = Vector2(10, 7)
 
 [node name="Player" type="CharacterBody2D"]
+top_level = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_ixoqx")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
