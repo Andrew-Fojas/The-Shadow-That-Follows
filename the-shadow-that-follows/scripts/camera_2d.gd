@@ -1,12 +1,17 @@
 extends Camera2D
 
-@export var total_time: float = 10.0
+@export var total_time: float = 60.0
 
 var time_remaining: float = 0.0
+var level_times : Array = [20.0, 30.0, 60.0]
 
 @onready var timer_label: Label = $TimerLabel
 
 func _ready():
+	var current_level = GameData.current_level
+	# Set total_time based on the current level
+	if current_level > 0 and current_level <= level_times.size():
+		total_time = level_times[current_level - 1]  # Assuming levels start at 1
 	# Initialize the timer
 	time_remaining = total_time
 	

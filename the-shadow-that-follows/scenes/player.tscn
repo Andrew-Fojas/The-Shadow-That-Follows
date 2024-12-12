@@ -381,9 +381,9 @@ script = ExtResource("5_gdpmr")
 
 [node name="TimerLabel" type="Label" parent="Camera2D"]
 texture_filter = 2
-offset_left = 57.0
+offset_left = 55.0
 offset_top = 23.0
-offset_right = 88.0
+offset_right = 86.0
 offset_bottom = 46.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(1, 0, 0, 1)
