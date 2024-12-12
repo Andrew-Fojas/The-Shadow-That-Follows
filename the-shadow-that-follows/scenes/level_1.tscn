@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="3_e4fvt"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
 [ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
-[ext_resource type="PackedScene" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
+[ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="7_mv4mj"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="11_tkisu"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="12_ystf1"]

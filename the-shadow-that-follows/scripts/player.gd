@@ -51,6 +51,8 @@ func _process(delta):
 			# game over (health at 0) 
 			# implement whatever needs to happen here 
 			# bc idk what should happen lmao :(
+			GameData.current_level = 0
+			get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
 			pass
 
 		player_hit_movement_timer = 1
