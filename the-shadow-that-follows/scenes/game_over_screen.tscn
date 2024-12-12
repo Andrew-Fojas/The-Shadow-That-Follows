@@ -63,7 +63,7 @@ the shadow envelops you completely, and all that remains
 is the echo of your final scream fading into oblivion..."
 horizontal_alignment = 1
 
-[node name="Play Again" type="Button" parent="."]
+[node name="PlayAgain" type="Button" parent="."]
 top_level = true
 layout_mode = 0
 offset_left = 435.0
@@ -105,5 +105,5 @@ expand_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)
 
-[connection signal="button_down" from="Play Again" to="." method="_on_start_game_button_down"]
-[connection signal="pressed" from="Play Again" to="." method="_on_start_game_pressed"]
+[connection signal="button_down" from="PlayAgain" to="." method="_on_start_game_button_down"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_start_game_pressed"]

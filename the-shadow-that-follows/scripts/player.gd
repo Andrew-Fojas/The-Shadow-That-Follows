@@ -18,7 +18,7 @@ var player_hit_movement_timer: float = 0.0
 
 @onready var torch_position: Vector2 = Vector2.ZERO
 @onready var point_light = $PointLight2D
-@onready var animation_player = $Player2
+@onready var animation_player: AnimatedSprite2D = $AnimatedSprite
 @onready var Health_UI = $"../UI/Health/HBoxContainer"
 
 func _ready():
@@ -105,7 +105,7 @@ func _physics_process(delta):
 	# Update animations if not dashing
 	if not is_dashing:
 		if direction == Vector2.ZERO:
-			animation_player.play("idle")
+			animation_player.play("idle") 
 		elif direction.x > 0:
 			animation_player.flip_h = false
 			animation_player.play("walk_right")
@@ -116,3 +116,7 @@ func _physics_process(delta):
 			animation_player.play("walk_down")
 		elif direction.y < 0:
 			animation_player.play("walk_up")
+
+# Dash bar cooldown_timer
+func get_cooldown_timer():
+	return cooldown_timer
