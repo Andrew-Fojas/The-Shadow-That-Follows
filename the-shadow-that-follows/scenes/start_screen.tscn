@@ -98,7 +98,7 @@ offset_top = -25.0
 offset_right = 1137.0
 offset_bottom = 95.0
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.710048, 0.710047, 0.710047, 1)
+theme_override_colors/font_color = Color(0.86683, 0.86683, 0.866829, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
@@ -118,7 +118,7 @@ offset_bottom = 662.0
 texture = ExtResource("2_2ne6v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 326)
+position = Vector2(591, 307)
 
 [connection signal="button_down" from="StartGame" to="." method="_on_start_game_button_down"]
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
