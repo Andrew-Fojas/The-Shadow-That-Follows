@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7vdi5")
 
-[node name="Start Game" type="Button" parent="."]
+[node name="StartGame" type="Button" parent="."]
 top_level = true
 layout_mode = 0
 offset_left = 77.0
@@ -58,7 +58,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_60uh7")
 text = "Start Game"
 icon_alignment = 1
 
-[node name="Quit Game" type="Button" parent="."]
+[node name="QuitGame" type="Button" parent="."]
 top_level = true
 layout_mode = 0
 offset_left = 75.0
@@ -98,7 +98,7 @@ offset_top = -25.0
 offset_right = 1137.0
 offset_bottom = 95.0
 theme_type_variation = &"HeaderLarge"
-theme_override_colors/font_color = Color(0.710048, 0.710047, 0.710047, 1)
+theme_override_colors/font_color = Color(0.86683, 0.86683, 0.866829, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.627451)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
@@ -118,8 +118,8 @@ offset_bottom = 662.0
 texture = ExtResource("2_2ne6v")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(576, 326)
+position = Vector2(591, 307)
 
-[connection signal="button_down" from="Start Game" to="." method="_on_start_game_button_down"]
-[connection signal="pressed" from="Start Game" to="." method="_on_start_game_pressed"]
-[connection signal="button_down" from="Quit Game" to="." method="_on_quit_game_button_down"]
+[connection signal="button_down" from="StartGame" to="." method="_on_start_game_button_down"]
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="button_down" from="QuitGame" to="." method="_on_quit_game_button_down"]

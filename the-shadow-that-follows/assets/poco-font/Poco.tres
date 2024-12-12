@@ -1,12 +1,8 @@
-[gd_resource type="DynamicFont" load_steps=2 format=2]
-
-[ext_resource path="res://fonts/poco/Poco.ttf" type="DynamicFontData" id=1]
+[gd_resource type="FontFile" format=3 uid="uid://u6nsf0ds0nex"]
 
 [resource]
-
-size = 40
-use_mipmaps = true
-extra_spacing_top = -18
-extra_spacing_bottom = 2
-font_data = ExtResource( 1 )
-
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0

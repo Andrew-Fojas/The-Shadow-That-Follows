@@ -63,7 +63,7 @@ the shadow envelops you completely, and all that remains
 is the echo of your final scream fading into oblivion..."
 horizontal_alignment = 1
 
-[node name="Play Again" type="Button" parent="."]
+[node name="PlayAgain" type="Button" parent="."]
 top_level = true
 layout_mode = 0
 offset_left = 435.0
@@ -94,8 +94,39 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_60uh7")
 text = "Play Again"
 icon_alignment = 1
 
+[node name="QuitGame" type="Button" parent="."]
+top_level = true
+layout_mode = 0
+offset_left = 441.0
+offset_top = 511.0
+offset_right = 753.0
+offset_bottom = 590.0
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_hover_pressed_color = Color(1, 0, 0.0156863, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0.0156863, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0.0156863, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_c0owu")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/focus = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_prp81")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jj2fv")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_756pf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_756pf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tdrye")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tdrye")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_l8fwl")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_60uh7")
+text = "Quit Game"
+icon_alignment = 1
+
 [node name="Background" type="TextureRect" parent="."]
-self_modulate = Color(0.65218, 0.65218, 0.65218, 1)
+self_modulate = Color(0.228511, 0.228511, 0.228511, 1)
 layout_mode = 0
 offset_right = 1159.0
 offset_bottom = 652.0
@@ -105,5 +136,6 @@ expand_mode = 1
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)
 
-[connection signal="button_down" from="Play Again" to="." method="_on_start_game_button_down"]
-[connection signal="pressed" from="Play Again" to="." method="_on_start_game_pressed"]
+[connection signal="button_down" from="PlayAgain" to="." method="_on_start_game_button_down"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_start_game_pressed"]
+[connection signal="button_down" from="QuitGame" to="." method="_on_quit_game_button_down"]
