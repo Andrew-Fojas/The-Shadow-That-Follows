@@ -40,7 +40,6 @@ func _process(delta):
 			player_hit_movement_timer = 0  
 
 	if player_hit:
-		print(player_hit)
 		direction = Vector2.ZERO
 		health -= 1
 		if health in range(1, 5):
