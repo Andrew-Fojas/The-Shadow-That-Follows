@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://g2tmg4td5b1x"]
+[gd_scene load_steps=61 format=3 uid="uid://g2tmg4td5b1x"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="2_rampw"]
@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
 [ext_resource type="Script" path="res://scripts/camera_2d.gd" id="5_0fioc"]
 [ext_resource type="Texture2D" uid="uid://w0k2najst2rh" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character.png" id="5_essd2"]
-[ext_resource type="PackedScene" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
+[ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 [ext_resource type="Texture2D" uid="uid://dgt808gs0c75v" path="res://assets/Snoblin_Prototype_Character/Assets/Prototype_Character/Prototype_Character_Red.png" id="5_xsw3y"]
 [ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="6_613ew"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="7_mv4mj"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="11_tkisu"]
+[ext_resource type="Script" path="res://scripts/transition_zone.gd" id="12_ystf1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x72s8"]
 texture = ExtResource("1_mlqf1")
@@ -564,7 +565,7 @@ animations = [{
 size = Vector2(19.8824, 30.5455)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lu7bb"]
-size = Vector2(16, 48)
+size = Vector2(2, 48)
 
 [node name="Level1" type="Node2D"]
 position = Vector2(2, 0)
@@ -636,9 +637,11 @@ path_postprocessing = 1
 
 [node name="ExitZone" type="Area2D" parent="."]
 position = Vector2(0, -1)
+script = ExtResource("12_ystf1")
+next_scene = "res://scenes/story_screen.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitZone"]
-position = Vector2(312, 168)
+position = Vector2(324, 169)
 shape = SubResource("RectangleShape2D_lu7bb")
 
 [node name="UI" type="CanvasLayer" parent="."]
