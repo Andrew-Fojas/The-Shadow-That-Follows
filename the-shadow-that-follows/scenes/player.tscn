@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="6_eo4qp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ixoqx"]
-size = Vector2(10, 14)
+size = Vector2(10, 7)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_krffe"]
 atlas = ExtResource("3_qao00")
@@ -350,7 +350,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-7, 9)
+position = Vector2(-7, 12.5)
 shape = SubResource("RectangleShape2D_ixoqx")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]

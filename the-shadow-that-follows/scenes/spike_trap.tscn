@@ -136,7 +136,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kc1on"]
-size = Vector2(26, 27)
+size = Vector2(24, 25)
 
 [node name="SpikeTrap" type="Node2D"]
 script = ExtResource("1_k05qk")

@@ -125,9 +125,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uowwm")
 }],
-"loop": true,
+"loop": false,
 "name": &"reaper_attack",
-"speed": 5.0
+"speed": 14.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -179,3 +179,5 @@ animations = [{
 [node name="BossMonster" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_nd0sr")
 animation = &"reaper_attack"
+frame = 9
+frame_progress = 1.0

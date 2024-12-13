@@ -1,5 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://dqe0u0mow6teo"]
+[gd_scene load_steps=36 format=3 uid="uid://dqe0u0mow6teo"]
 
+[ext_resource type="Script" path="res://scripts/level_3.gd" id="1_0addd"]
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_gdydx"]
 [ext_resource type="Texture2D" uid="uid://dt8434u4c7rnk" path="res://assets/Flesh & Bone/Spiketrap.png" id="2_8yalv"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="3_ih3rg"]
@@ -12,13 +13,14 @@
 [ext_resource type="Texture2D" uid="uid://vu8ypmd1o4a1" path="res://assets/blood/blood_5.png" id="7_t4wa4"]
 [ext_resource type="Texture2D" uid="uid://ho6hq6tqu4eb" path="res://assets/blood/blood_6.png" id="8_natot"]
 [ext_resource type="Texture2D" uid="uid://dculdl2y4dbjg" path="res://assets/blood/Untitled 5.png" id="9_7cmpp"]
-[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="10_8i45m"]
+[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="10_8i45m"]
 [ext_resource type="Texture2D" uid="uid://cx10o3asmcxsj" path="res://assets/blood/Untitled 6.png" id="10_jpb64"]
-[ext_resource type="PackedScene" path="res://scenes/static_body_2d.tscn" id="11_a81vd"]
+[ext_resource type="PackedScene" uid="uid://b43rr47tf6tdn" path="res://scenes/static_body_2d.tscn" id="11_a81vd"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="11_cr14c"]
 [ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="12_n7fid"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="13_k05j3"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="14_dfgok"]
+[ext_resource type="PackedScene" uid="uid://e8rceqj7yyw1" path="res://scenes/sound.tscn" id="21_2u1rq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gempu"]
 texture = ExtResource("1_gdydx")
@@ -292,6 +294,7 @@ size = Vector2(48, 1)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ysbx"]
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_0addd")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_kr6v6")
@@ -329,6 +332,8 @@ script = ExtResource("11_cr14c")
 [node name="BossMonster" parent="Enemy" instance=ExtResource("12_n7fid")]
 position = Vector2(3.8147e-06, -1.90735e-06)
 animation = &"reaper_attack_running"
+frame = 0
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(7.62939e-06, 0)
@@ -396,5 +401,7 @@ texture = ExtResource("14_dfgok")
 expand_mode = 2
 
 [node name="StaticBody2D" parent="." instance=ExtResource("11_a81vd")]
+
+[node name="Sound" parent="." instance=ExtResource("21_2u1rq")]
 
 [connection signal="body_entered" from="ExitZone" to="ExitZone" method="_on_body_entered"]

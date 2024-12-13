@@ -2,6 +2,7 @@ extends Control
 
 @export var typing_speed: float = 0.03 # Time delay between characters
 @onready var text_label: Label = $TextLabel
+@onready var menu_music = $Sound/MenusMusic
 
 var full_text: String = ""
 var current_char_index: int = 0
@@ -43,7 +44,7 @@ var _levels: Array = [
 func _ready() -> void:
 	if GameData.current_level < _narratives.size():
 		set_text(_narratives[GameData.current_level])
-	
+	menu_music.play()
 
 # Set text to display in the story scene
 func set_text(new_text: String) -> void:

@@ -32,7 +32,7 @@ func _ready():
 	progress_bar.add_theme_stylebox_override("background", style_box_bg)
 	progress_bar.add_theme_stylebox_override("fill", style_box_fill)
 
-func _process(delta):
+func _process(_delta):
 	# Update progress bar based on time
 	if player.has_method("get_cooldown_timer"):
 		progress_bar.value = total_cooldown - player.get_cooldown_timer()

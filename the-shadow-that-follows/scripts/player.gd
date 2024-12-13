@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var dash_cooldown: float = 5.0
 @export var spotlight_scale_default: float = 0.2
 @export var spotlight_scale_widened: float = 0.4
-@export var torch_trigger_distance: float = 20.0
+@export var torch_trigger_distance: float = 30.0
 @export var player_hit: bool = false
 @export var health: int = 5
 
@@ -20,6 +20,8 @@ var player_hit_movement_timer: float = 0.0
 @onready var point_light = $PointLight2D
 @onready var animation_player: AnimatedSprite2D = $AnimatedSprite
 @onready var Health_UI = $"../UI/Health/HBoxContainer"
+@onready var walking_audio = $"../Sound/Walking"
+@onready var slide_audio = $"../Sound/Slide"
 
 func _ready():
 	var torch_node = get_node("../Torch")  
@@ -40,6 +42,8 @@ func _process(delta):
 			player_hit_movement_timer = 0  
 
 	if player_hit:
+		walking_audio.stop()
+		slide_audio.stop()
 		direction = Vector2.ZERO
 		health -= 1
 		if health in range(1, 5):
@@ -76,6 +80,7 @@ func _physics_process(delta):
 
 	# Handle dashing
 	if Input.is_action_just_pressed("space") and cooldown_timer <= 0:
+		slide_audio.play()
 		if direction.x > 0:
 			animation_player.flip_h = false
 			animation_player.play("dash_right")
@@ -87,12 +92,14 @@ func _physics_process(delta):
 		elif direction.y < 0:
 			animation_player.play("dash_up")
 		else:
-			animation_player.play("dash_generic")  # For diagonal dashes
+			#animation_player.play("dash_generic")
+			pass  
 		is_dashing = true
 		dash_timer = dash_duration
 		cooldown_timer = dash_cooldown
 
 	if is_dashing:
+		walking_audio.stop()
 		current_speed = dash_speed
 		dash_timer -= delta
 		if dash_timer <= 0:
@@ -105,18 +112,24 @@ func _physics_process(delta):
 
 	# Update animations if not dashing
 	if not is_dashing:
+		slide_audio.stop()
 		if direction == Vector2.ZERO:
-			animation_player.play("idle") 
-		elif direction.x > 0:
-			animation_player.flip_h = false
-			animation_player.play("walk_right")
-		elif direction.x < 0:
-			animation_player.flip_h = true
-			animation_player.play("walk_right")
-		elif direction.y > 0:
-			animation_player.play("walk_down")
-		elif direction.y < 0:
-			animation_player.play("walk_up")
+			animation_player.play("idle")
+			walking_audio.stop()
+		else: 
+			if not walking_audio.playing :
+				walking_audio.play()
+			
+			if direction.x > 0:
+				animation_player.flip_h = false
+				animation_player.play("walk_right")
+			elif direction.x < 0:
+				animation_player.flip_h = true
+				animation_player.play("walk_right")
+			elif direction.y > 0:
+				animation_player.play("walk_down")
+			elif direction.y < 0:
+				animation_player.play("walk_up")
 
 # Dash bar cooldown_timer
 func get_cooldown_timer():
