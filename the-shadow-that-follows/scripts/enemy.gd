@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var base_speed: int = 20
 @export var max_speed: int = 60
 @export var distance_scale: float = 0.1
-@export var attack_range: float = 50.0
+@export var attack_range: float = 20.0
 @export var damage_range: float = 10.0 
 
 var player_pos: Vector2
@@ -34,6 +34,12 @@ func _physics_process(_delta: float) -> void:
 	if velocity.x != 0:
 		animation_enemy.flip_h = velocity.x < 0
 
+	if distance <= 40:
+		# Boss only laughs once when you initially meet him (in each level)
+		if not laughed_yet:
+			boss_laugh_audio.play()
+			laughed_yet = true
+
 	# Check if the reaper is in the damage range
 	if distance <= damage_range:
 		#animation_enemy.play("reaper_attack")
@@ -41,10 +47,6 @@ func _physics_process(_delta: float) -> void:
 			boss_attack_audio.play()
 		player.player_hit = true
 	elif distance <= attack_range:
-		# Boss only laughs once when you initially meet him (in each level)
-		if not laughed_yet:
-			boss_laugh_audio.play()
-			laughed_yet = true
 		# Check if the reaper is close enough to attack
 		if not boss_attack_audio.playing:
 			boss_attack_audio.play()
