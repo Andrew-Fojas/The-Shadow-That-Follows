@@ -11,7 +11,7 @@ func _ready():
 	var current_level = GameData.current_level
 	# Set total_time based on the current level
 	if current_level > 0 and current_level <= level_times.size():
-		total_time = level_times[current_level - 1]  # Assuming levels start at 1
+		total_time = level_times[current_level - 1]
 	# Initialize the timer
 	time_remaining = total_time
 	
@@ -42,7 +42,3 @@ func update_timer_display():
 func game_over():
 	GameData.current_level = 0
 	get_tree().change_scene_to_file("res://scenes/game_over_screen.tscn")
-
-# Optional: Reset timer
-func reset_timer():
-	time_remaining = total_time
