@@ -1,8 +1,10 @@
 extends Node2D
 
-@onready var player = $"../Player"
+@onready var player = get_tree().current_scene.get_node("Player")
+#$"../Player"
 @onready var animation_player = $SpikeTrapAnimation
-@onready var spike_audio = $"../Sound/Spike"
+@onready var spike_audio = get_tree().current_scene.get_node("Sound/Spike")
+#$"../Sound/Spike"
 
 func _ready() -> void:
 	animation_player.animation_finished.connect(_on_animation_finished)
