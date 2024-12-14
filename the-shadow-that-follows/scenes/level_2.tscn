@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ho6hq6tqu4eb" path="res://assets/blood/blood_6.png" id="7_b6n3c"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="8_8olqd"]
 [ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="9_2eq6q"]
-[ext_resource type="PackedScene" path="res://scenes/boss_monster.tscn" id="9_i1k13"]
+[ext_resource type="PackedScene" uid="uid://caafexag82u14" path="res://scenes/boss_monster.tscn" id="9_i1k13"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="10_bqii3"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="13_g72fg"]
 [ext_resource type="PackedScene" uid="uid://fppfqami01fn" path="res://scenes/sound.tscn" id="17_uoove"]
@@ -282,7 +282,7 @@ layer_4/tile_data = PackedInt32Array(458746, 0, 12, 524282, 0, 13, 458748, 13107
 layer_5/name = "decor2"
 layer_5/tile_data = PackedInt32Array(458748, 65536, 14, 524284, 65536, 15, 458749, 131072, 14, 524285, 131072, 15, 589820, 327680, 14, 655356, 327680, 15, 589821, 393216, 14, 655357, 393216, 15, 655371, 917504, 1342177280, 720907, 983040, 1342177280, 655370, 917504, 1342177281, 720906, 983040, 1342177281, 655369, 917504, 1342177282, 720905, 983040, 1342177282, 262147, 851968, 5, 327683, 851968, 6, 393219, 851968, 7, 458755, 851968, 8, 262148, 917504, 5, 327684, 917504, 6, 393220, 917504, 7, 458756, 917504, 8, 393226, 983040, 5, 458762, 983040, 6, -983020, 655360, 9, -917484, 720896, 12, -983018, 589824, 5, -917482, 589824, 6, -983017, 655360, 5, -917481, 655360, 6, -524265, 458752, 13, -458729, 458752, 14, -393193, 458752, 15, -524264, 524288, 13, -458728, 524288, 14, -393192, 524288, 15, -524263, 589824, 13, -458727, 589824, 14, -393191, 589824, 15, -589817, 851968, 3, -524281, 851968, 4, -589816, 917504, 3, -524280, 917504, 4, -589814, 983040, 3, -524278, 983040, 4, -589815, 917504, 3, -131060, 786432, 11, -524279, 917504, 4, -262140, 655360, 9, -917494, 655360, 9, -262133, 655360, 9, 262154, 655360, 9, 327675, 655360, 9, -1114088, 655360, 9, -65510, 655360, 9, 65557, 655360, 9, 196627, 655360, 9, -458731, 655360, 9, -262144, 524288, 9, -196593, 524288, 9, -589807, 524288, 9, -1048551, 524288, 9, -65513, 524288, 9, 327677, 458752, 9, 262146, 458752, 9, 393221, 458752, 9, -131071, 458752, 9, -917499, 458752, 9, -327661, 458752, 9, -655343, 458752, 9, 262170, 458752, 9, 393243, 458752, 9, 720895, 524288, 9, 524288, 524288, 9, 196611, 524288, 9, -917496, 524288, 9, -851958, 196608, 4, -851957, 262144, 4, 327706, 196608, 4, 327707, 262144, 4, 327690, 655360, 3, 393210, 655360, 3, -393196, 720896, 3, -524271, 720896, 4, -65526, 196608, 5, 720898, 196608, 5, -393199, 65536, 5, -720891, 196608, 5, -458726, 196608, 5, 65534, 3, 0, 131071, 1, 268435456, 131070, 3, 0, -2, 3, 0, 0, 5, 0, 65535, 6, 0, 65537, 5, 1073741824, 1, 5, 1879048192)
 
-[node name="Node2D" parent="." instance=ExtResource("2_jxgoa")]
+[node name="SpikeTrap" parent="." instance=ExtResource("2_jxgoa")]
 position = Vector2(269, 45)
 
 [node name="Player" parent="." instance=ExtResource("2_ccx4i")]
@@ -294,11 +294,11 @@ position = Vector2(121, -1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
-color = Color(0, 0, 0, 1)
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(392, -112)
 scale = Vector2(0.708333, 0.6875)
+collision_mask = 2
 platform_wall_layers = 2
 script = ExtResource("8_8olqd")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://digllimkqy0cr"]
+[gd_scene load_steps=27 format=3 uid="uid://caafexag82u14"]
 
 [ext_resource type="Texture2D" uid="uid://dyl54khxlfo84" path="res://assets/Reaper (Animated Pixel Art)/Animation Sprite Sheets (PNG)/HostileAttackReaper-Sheet.png" id="1_1qllj"]
 [ext_resource type="Texture2D" uid="uid://cg5oaepjbg4qn" path="res://assets/Reaper (Animated Pixel Art)/Animation Sprite Sheets (PNG)/HostileRunningReaper-Sheet.png" id="2_3gqeo"]
