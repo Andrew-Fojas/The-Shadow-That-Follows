@@ -1,4 +1,4 @@
-# The title of your game #
+# The Shadow That Follows #
 
 ## Summary ##
 
@@ -6,7 +6,7 @@
 
 ## Project Resources
 
-[Web-playable version of your game.](https://itch.io/)  
+[The Shadow That Follows on itch.io]([https://itch.io/](https://keanu-c.itch.io/the-shadow-that-follows))  
 [Trailor](https://youtube.com)  
 [Press Kit](https://dopresskit.com/)  
 [Proposal: make your own copy of the linked doc.](https://docs.google.com/document/d/1qwWCpMwKJGOLQ-rRJt8G8zisCa2XHFhv6zSWars0eWM/edit?usp=sharing)  
