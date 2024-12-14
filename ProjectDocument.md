@@ -43,6 +43,17 @@
 
 *   Changed boss collision mask so that it could pass thorough borders and not get stuck.
 
+## Andrew Fojas
+[Heart Sprite](https://gpway.itch.io/2d-pixel-heart?download#google_vignette)
+
+[Torch Sprite](https://gianmansuper.itch.io/pixel-torches)
+
+[Spike Hit Audio (used a machete sound)](https://terrorbytegames.itch.io/zombie-massacre-sound-effects-starter-pack)
+
+[Torch Burning Audio](https://gregor-quendel.itch.io/free-cinematic-sound-effects)
+
+[Dash Audio](https://onstringedge.itch.io/slides-sound-assets-for-games-and-films)
+
 # External Code, Ideas, and Structure #
 
 If your project contains code that: 1) your team did not write, and 2) does not fit cleanly into a role, please document it in this section. Please include the author of the code, where to find the code, and note which scripts, folders, or other files that comprise the external contribution. Additionally, include the license for the external code that permits you to use it. You do not need to include the license for code provided by the instruction team.
@@ -52,6 +63,14 @@ If you used tutorials or other intellectual guidance to create aspects of your p
 [Helped me (Keanu Chau) write the code for typing text effect](https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s)
 
 [How to implement enemy attacks (Ethan Nguyen)](https://www.youtube.com/watch?v=9u59U-DWNJs)
+
+[Helped me (Andrew Fojas) add the music/sound effects. Also helped with busses and audio manipulation. Part 1](https://www.youtube.com/watch?v=ANUBrcw8ONI)
+
+[Helped me (Andrew Fojas) add the music/sound effects. Part 2](https://www.youtube.com/watch?v=N6-2Iwb8xoU)
+
+[Helped me (Andrew Fojas) add the health mechanic and UI to display health](https://www.youtube.com/watch?v=kBzV7vgdQfU)
+
+[(Andrew Fojas) Found the video that other team members used to create map boundaries](https://www.youtube.com/watch?v=GiZuWjXmvcc)
 
 # Main Roles #
 
@@ -68,11 +87,32 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 ## Producer
 
-**Describe the steps you took in your role as producer. Typical items include group scheduling mechanisms, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, dependency/task tracking, Gantt charts, etc.), and repository management methodology.**
+*Main Platform Creation* - I created a discord server to serve as our main platform for all things related to the server. I set up important channels such as role-related channels, meeting details, documents/assets, and announcements. (Everyone was notified beforehand that class faculty may join to see this server as documentation) [Discord Server Invite](https://discord.gg/v8PDcrHbmF)
 
-*Main Platform Creation* - I created a discord server to serve as our main communication platform. I set up important channels such as role-related channels, meeting details, documents/assets, and announcements. (Everyone was notified beforehand that class faculty may join to see this server as documentation) [Discord Server Invite](https://discord.gg/v8PDcrHbmF)
+*Task Dependency Chart* - I created a Dependency Chart of important tasks for everyone to look at to see big-picture what we needed to get done in the time we had for the project. [Dependency Chart in Github](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/main/ProducerMaterials/Task_Flowchart.jpg)
+
+*Task Dependency Chart* - I created a Dependency Chart of important tasks for everyone to look at to see big-picture what we needed to get done in the time we had for the project. [Dependency Chart in Github](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/main/ProducerMaterials/Task_Flowchart.jpg)
+
+*Team Logistics and Task Reassignment* - I assisted in resolving git conflicts and push/pulling from github when members requested help (I did moreso in person but was able to assist online via discord as well). I took over certain tasks of other roles when they asked for assistance. If I felt I did not have the resources/time to be able to immediately help someone, I coordinated efforts in our group to get other teammates to help [Logistics and Support Examples](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/TaskAssistance)
 
 *Meeting Scheduling and Notes* - I scheduled meetings in order to keep us on track with our group project. I also created meeting notes for the first few meetings because I felt they were helpful. I also organized meetings for important events like the Progress Report. Further detailed correspondence about meetings can be found in the meetings and general channels on our discord server. [GitHub Meeting Screenshots](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/MeetingDocumentation)
+
+
+Below are the detailed implementation tasks I assisted other roles with:
+
+
+*Torch and Reduced Field of View* - I implemented the small circular field of view with a point light node (circle of what you can see) and a canvasmodulate node (the black space) to increase the tension and horror the player experiences in game. Furthermore, I added the torch mechanic that increases the field of view. I also added the animation and found the sprite for the torch. [Field of View Widening in Player Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/player.gd#L67)
+
+*Torch Audio* - I implemented the torch's audio. I made it so that the burning noise gets gradually quieter as you go away from the torch and get louder as you get closer to it. I lerp'ed the audio and took inspiration from the Exercise 3 implementaiton of the lerp camera to get a similar 
+"smoothing" effect, but in a different context. [Torch Audio Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/torch.gd#L27)
+
+*Ambient Music Audio* - I implemented the ambient music that plays in each menu and game level. [Menu Music Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/ec9d7f56cda6702a77606b46f39726755344b745/the-shadow-that-follows/scripts/menu_screen.gd#L9), [Level Music Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/ec9d7f56cda6702a77606b46f39726755344b745/the-shadow-that-follows/scripts/level.gd#L8)
+
+*Added Player Dash Animation + Hurt Animation* - I implemented the player's dash animation in all directions and hurt animation by adding a custom sprite sequence based on the player sprite sheets. [Player Scene](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/main/the-shadow-that-follows/scenes/player.tscn)
+
+*Various Sound Effect Elements* - I implemented the other audio elements which include the dash audio, spike hit audio, and the footsteps audio. I lumped all of these together because they are all implemented to play when their associated actions (dashing, hitting a spike, and walking respectively) are triggered [Dashing](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/player.gd#L83), [Spike](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/spike_trap.gd#L15), [Walking](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/player.gd#L120) 
+
+*Health & Health UI* - I created and implemented the health logic and UI to display the hearts. To update the health, I took inspiration from the signals in exercise 3 which played various audios in the sound node from other nodes. Instead of using a signal, I just used a boolean variable in player that other nodes can raise to damage the player. I created a player [Damage Logic + UI Health implementation in Player Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/ec9d7f56cda6702a77606b46f39726755344b745/the-shadow-that-follows/scripts/player.gd#L44)
 
 ## User Interface and Input: Keanu Chau
 
@@ -147,11 +187,20 @@ World-Building:
 
 **Document the sound style.** 
 
-## Gameplay Testing
+## Gameplay Testing - Andrew Fojas
 
-**Add a link to the full results of your gameplay tests.**
+Had all team members besides Ethan get 2 playtests, and I did four of them. Ethan was exempt so that he could fully devote himself to press kit and trailer post game completion.
 
-**Summarize the key findings from your gameplay tests.**
+[Playtest Forms + Report](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/PlayTestDocuments)
+
+
+Significant findings:
+
+* Dash Mechanic Seen as Fun - Nearly every playtester mentioned enjoying the dash mechanic and highlighted how it created exciting moments when escaping the reaper. However, many players didn't know they could dash initially.
+* Timer UI - This was the most consistently cited UI issue across all playtests. Players repeatedly mentioned wanting to see the timer clearly especially cause it's a core game mechanic. We have since fixed this.
+* Level 3 - The third level was very important in player experience. However, it had mixed reception: some players found it appropriately challenging, but others felt it dragged on too long. 
+* Controls Need Introduction - Multiple playtesters had to be told the controls or discovered them through chance. Even our experienced gamers struggled with discovering the dash mechanic. A simple control display or brief message about controls could significantly improve the initial player experience.
+* Horror/Thriller Elements Recieved Positively - The game successfully creates tension and fear as intended. Players reported being scared when the reaper appeared suddenly. The audio/visual components received positive feedback. The horror aspect is delivered on, even if players eventually are more focused on the challenge of the game rather than the aesthetic.
 
 ## Narrative Design: Keanu Chau
 
