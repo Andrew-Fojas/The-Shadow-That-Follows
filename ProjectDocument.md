@@ -32,6 +32,8 @@
 
 - **GitHub Conflict Assistance**: I helped resolve several GitHub conflicts, ensuring smooth collaboration and version control throughout the development process. This included merging branches and fixing issues that arose when multiple team members were working on the same files.
 
+
+
 # External Code, Ideas, and Structure #
 
 If your project contains code that: 1) your team did not write, and 2) does not fit cleanly into a role, please document it in this section. Please include the author of the code, where to find the code, and note which scripts, folders, or other files that comprise the external contribution. Additionally, include the license for the external code that permits you to use it. You do not need to include the license for code provided by the instruction team.
