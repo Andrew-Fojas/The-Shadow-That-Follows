@@ -9,7 +9,7 @@
 [The Shadow That Follows on itch.io](https://keanu-c.itch.io/the-shadow-that-follows)  
 [Trailor](https://youtube.com)  
 [Press Kit](https://dopresskit.com/)  
-[Proposal: make your own copy of the linked doc.](https://docs.google.com/document/d/1qwWCpMwKJGOLQ-rRJt8G8zisCa2XHFhv6zSWars0eWM/edit?usp=sharing)  
+[Proposal: The Shadow That Follows: Initial Plan.](https://docs.google.com/document/d/1_s2GGPkNTNx4cO-fwIupkpcOfQshuwqgIplpRGbJLsY/edit?usp=sharing)  
 
 ## Gameplay Explanation ##
 
