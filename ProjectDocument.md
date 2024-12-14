@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-**The Shadow That Follows is a 2-D horror game that has players navigate through a dark, trap-filled maze while avoiding a deadly monster. Creating a suspenseful, immersive experience where players feel the tension of survival as they search for the maze’s exit is our goal. Set in a decrepit maze shrouded in darkness, the game’s narrative centers on an unknown protagonist trapped in a nightmare. The player must uncover the maze’s paths while evading a shadowy horror and surviving its deadly traps. The user experience focuses on atmospheric horror, with dim lighting, eerie sound effects, and unpredictable dangers heightening the suspense. The player will explore increasingly challenging mazes, relying on strategy and reflexes to overcome obstacles. The minimalist controls and engaging mechanics make the game accessible yet intense, delivering a thrilling horror experience.**
+**The Shadow That Follows is a 2-D horror game that has players navigate through a dark, trap-filled maze while avoiding a deadly monster. Prepare yourself for a suspenseful, immersive experience where players feel the tension of survival as they search for the maze’s exit. Set in a decrepit maze shrouded in darkness, the game’s narrative centers on an unknown protagonist trapped in a nightmare. The player must uncover the maze’s paths while evading a shadowy horror and surviving its deadly traps. The user experience focuses on atmospheric horror, with dim lighting, eerie sound effects, and unpredictable dangers heightening the suspense. The player will explore increasingly challenging mazes, relying on strategy, memory, and reflexes to overcome obstacles.**
 
 ## Project Resources
 
