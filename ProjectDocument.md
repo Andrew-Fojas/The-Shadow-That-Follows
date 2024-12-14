@@ -23,6 +23,15 @@
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
+# Ethan Nguyen
+- **Boss Animations and Sprites**: I added animations and sprites for the boss from our selection, helping to bring the boss to life and make encounters more dynamic and engaging.
+
+- **Player Animations**: Although I didn’t find the assets for the player animations, I successfully implemented them into the player’s movement system. This added fluidity and visual appeal to the character’s actions.
+
+- **Boss Attack Mechanics**: I implemented the boss attack mechanics, where the boss triggers an attack animation when getting close to the player. When it gets even closer, the boss physically attacks the player, adding a sense of danger and urgency during encounters.
+
+- **GitHub Conflict Assistance**: I helped resolve several GitHub conflicts, ensuring smooth collaboration and version control throughout the development process. This included merging branches and fixing issues that arose when multiple team members were working on the same files.
+
 # External Code, Ideas, and Structure #
 
 If your project contains code that: 1) your team did not write, and 2) does not fit cleanly into a role, please document it in this section. Please include the author of the code, where to find the code, and note which scripts, folders, or other files that comprise the external contribution. Additionally, include the license for the external code that permits you to use it. You do not need to include the license for code provided by the instruction team.
@@ -30,6 +39,8 @@ If your project contains code that: 1) your team did not write, and 2) does not 
 If you used tutorials or other intellectual guidance to create aspects of your project, include reference to that information as well.
 
 [Helped me (Keanu Chau) write the code for typing text effect](https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s)
+
+[How to implement enemy attacks (Ethan Nguyen)](https://www.youtube.com/watch?v=9u59U-DWNJs)
 
 # Main Roles #
 
