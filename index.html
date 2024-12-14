@@ -1,14 +1,108 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Shadow That Follows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #eee;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background-color: #222;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #ff4141;
+        }
+        .container {
+            padding: 20px;
+        }
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .gallery img {
+            width: 300px; 
+            height: 150px; 
+            border: 2px solid #555;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            object-fit: cover;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+        }
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #222;
+            color: #888;
+        }
+        .press-kit {
+            max-width: 800px;
+            margin: 30px auto;
+            text-align: left;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        .press-kit h2 {
+            color: #ff4141;
+        }
+        .press-kit p {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+    </style>
 </head>
 <body>
-    <h1>The Shadow That Follows</h1>
-    <img src="images/logo.png" alt="Company Logo" width="200" height="100">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil a saepe ratione in sed sit error! Accusamus omnis, corrupti nihil earum mollitia at, unde magnam officiis ab tempore eum amet!</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil a saepe ratione in sed sit error! Accusamus omnis, corrupti nihil earum mollitia at, unde magnam officiis ab tempore eum amet!</p>
+    <header>
+        <h1>The Shadow That Follows</h1>
+    </header>
+    <div class="container">
+        <div class="description">
+            <p>Welcome to <strong>The Shadow That Follows</strong>, a spine-chilling horror game that will test your courage and wit. You awaken in an abandoned mental facility, surrounded by dark corridors and eerie silence. Your mission? Escape the facility, room by room, while evading a relentless entity that is always one step behind.</p>
+            <p>Explore the environment to find objects that may aid your escape. But beware, not everything is what it seem, as everything seems a bit too familiar... Each level intensifies the terror, presenting new challenges and deadlier threats. Can you outsmart the shadow and make it to freedom or will it consume you?</p>
+        </div>
+        <div class="gallery">
+            <img src="images/start_screen.png" alt="Start Screen">
+            <img src="images/description.png" alt="Game Description">
+            <img src="images/level1.png" alt="Level 1">
+            <img src="images/level2.png" alt="Level 2">
+            <img src="images/exit.png" alt="Exit">
+            <img src="images/room.png" alt="Room">
+        </div>
+        <div class="press-kit">
+            <h2>Press Kit</h2>
+            <p><strong>Development Story:</strong> "The Shadow That Follows" began as a skeleton project when we first started. We used basic tile assets, then built the foundation of a haunting mental facility. From there, we carefully added sprites, breathing life into the dark and twisted hallways.</p>
+            <p>As the core mechanics took shape, we implemented the entity that follows players, then fine-tuned its behavior to ensure it evokes a genuine sense of fear using sound assests. We turned to polishing the atmospheric lighting, sound effects, and unsettling environmental details to create an eerie experience.</p>
+            <p><strong>Trailer Creation:</strong> Making the trailer was a long process, and to capture key moments of tension and dread, using cinematic camera angles and sound design to reflect the essence of the game. The goal was to give players a taste of the fear and challenge that "The Shadow That Follows" promises, before they actually play the game.</p>
+            <p><strong>Why Horror?</strong> We wanted to create a game that resonates deeply with players, immersing them in an atmosphere where every choice feels critical. Horror is the perfect genre to evoke raw emotions and we really enjoyed the creative process of going for a horror approach.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 The Shadow That Follows. All rights reserved.</p>
+    </footer>
 </body>
 </html>
