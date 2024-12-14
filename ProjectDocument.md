@@ -2,7 +2,7 @@
 
 ## Summary ##
 
-**The Shadow That Follows is a 2-D horror game that has players navigate through a dark, trap-filled maze while avoiding a deadly monster. Creating a suspenseful, immersive experience where players feel the tension of survival as they search for the maze’s exit is our goal. Set in a decrepit maze shrouded in darkness, the game’s narrative centers on an unknown protagonist trapped in a nightmare. The player must uncover the maze’s paths while evading a shadowy horror and surviving its deadly traps. The user experience focuses on atmospheric horror, with dim lighting, eerie sound effects, and unpredictable dangers heightening the suspense. The player will explore increasingly challenging mazes, relying on strategy and reflexes to overcome obstacles. The minimalist controls and engaging mechanics make the game accessible yet intense, delivering a thrilling horror experience.**
+**The Shadow That Follows is a 2-D horror game that has players navigate through a dark, trap-filled maze while avoiding a deadly monster. Prepare yourself for a suspenseful, immersive experience where players feel the tension of survival as they search for the maze’s exit. Set in a decrepit maze shrouded in darkness, the game’s narrative centers on an unknown protagonist trapped in a nightmare. The player must uncover the maze’s paths while evading a shadowy horror and surviving its deadly traps. The user experience focuses on atmospheric horror, with dim lighting, eerie sound effects, and unpredictable dangers heightening the suspense. The player will explore increasingly challenging mazes, relying on strategy, memory, and reflexes to overcome obstacles.**
 
 ## Project Resources
 
@@ -13,8 +13,13 @@
 
 ## Gameplay Explanation ##
 
-**In this section, explain how the game should be played. Treat this as a manual within a game. Explaining the button mappings and the most optimal gameplay strategy is encouraged.**
+**2-D Horror game where your goal is to escape the mental facility. The exit at every level is covered in blood for easier recognition of the escape. You must avoid the deadly spikes, the shadow grim reaper, and escape the level in time or you die. The game always restarts at level 1, so make sure to memorize the escapes of previous levels to help alleviate the anger that is going through levels again.**
 
+*Control Scheme:*
+
+**WASD or Arrows Keys: Up, Down, Left Right**
+
+**Spacebar: Dash Movement**
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
@@ -23,6 +28,8 @@
 If your project contains code that: 1) your team did not write, and 2) does not fit cleanly into a role, please document it in this section. Please include the author of the code, where to find the code, and note which scripts, folders, or other files that comprise the external contribution. Additionally, include the license for the external code that permits you to use it. You do not need to include the license for code provided by the instruction team.
 
 If you used tutorials or other intellectual guidance to create aspects of your project, include reference to that information as well.
+
+[Helped me (Keanu Chau) write the code for typing text effect](https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s)
 
 # Main Roles #
 
