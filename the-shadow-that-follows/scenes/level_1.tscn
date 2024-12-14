@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://vu8ypmd1o4a1" path="res://assets/blood/blood_5.png" id="3_fmda1"]
 [ext_resource type="Texture2D" uid="uid://ho6hq6tqu4eb" path="res://assets/blood/blood_6.png" id="4_5itkv"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="4_lw3o3"]
-[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="4_txh2o"]
+[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="4_txh2o"]
 [ext_resource type="Texture2D" uid="uid://dy5sus8pi5cvf" path="res://assets/blood/blood_splat_3.png" id="5_4kcko"]
 [ext_resource type="PackedScene" uid="uid://caafexag82u14" path="res://scenes/boss_monster.tscn" id="5_t6f1d"]
 [ext_resource type="Texture2D" uid="uid://dx30ovoueuclc" path="res://assets/blood/small_blood_splat.png" id="6_xt5vw"]

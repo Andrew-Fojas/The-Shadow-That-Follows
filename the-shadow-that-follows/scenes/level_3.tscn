@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_2feko"]
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_gdydx"]
-[ext_resource type="Texture2D" uid="uid://dt8434u4c7rnk" path="res://assets/Flesh & Bone/Spiketrap.png" id="2_8yalv"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="3_ih3rg"]
 [ext_resource type="Texture2D" uid="uid://coy2yntwf0lt4" path="res://assets/blood/bloodsplat_1.png" id="3_uglug"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="4_hnmkn"]
@@ -13,9 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://vu8ypmd1o4a1" path="res://assets/blood/blood_5.png" id="7_t4wa4"]
 [ext_resource type="Texture2D" uid="uid://ho6hq6tqu4eb" path="res://assets/blood/blood_6.png" id="8_natot"]
 [ext_resource type="Texture2D" uid="uid://dculdl2y4dbjg" path="res://assets/blood/Untitled 5.png" id="9_7cmpp"]
-[ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="10_8i45m"]
+[ext_resource type="PackedScene" path="res://scenes/torch.tscn" id="10_8i45m"]
 [ext_resource type="Texture2D" uid="uid://cx10o3asmcxsj" path="res://assets/blood/Untitled 6.png" id="10_jpb64"]
-[ext_resource type="PackedScene" uid="uid://b43rr47tf6tdn" path="res://scenes/static_body_2d.tscn" id="11_a81vd"]
+[ext_resource type="PackedScene" path="res://scenes/static_body_2d.tscn" id="11_a81vd"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="11_cr14c"]
 [ext_resource type="PackedScene" uid="uid://caafexag82u14" path="res://scenes/boss_monster.tscn" id="12_n7fid"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="13_k05j3"]
@@ -226,8 +225,11 @@ texture = ExtResource("1_gdydx")
 11:15/0 = 0
 12:15/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1vo7a"]
+load_path = "res://.godot/imported/Spiketrap.png-3d302a1d3811c74fbd3445de1f858c22.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cggg1"]
-texture = ExtResource("2_8yalv")
+texture = SubResource("CompressedTexture2D_1vo7a")
 4:0/0 = 0
 5:0/0 = 0
 0:1/0 = 0
