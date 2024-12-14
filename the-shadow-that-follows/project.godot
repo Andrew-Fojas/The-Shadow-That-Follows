@@ -23,6 +23,7 @@ GameData="*res://scripts/game_data.gd"
 
 window/size/viewport_width=1200
 window/size/viewport_height=600
+window/stretch/mode="viewport"
 
 [dotnet]
 
