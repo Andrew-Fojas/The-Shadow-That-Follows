@@ -7,8 +7,8 @@
 ## Project Resources
 
 [The Shadow That Follows on itch.io](https://keanu-c.itch.io/the-shadow-that-follows)  
-[Trailor](https://youtube.com)  
-[Press Kit](https://dopresskit.com/)  
+[Trailor](https://drive.google.com/file/d/1AhtO4uz6NmKRa44NaspjD5EEgT1YOxGc/view?usp=sharing)  
+[Press Kit](https://andrew-fojas.github.io/The-Shadow-That-Follows/)  
 [Proposal: The Shadow That Follows: Initial Plan.](https://docs.google.com/document/d/1_s2GGPkNTNx4cO-fwIupkpcOfQshuwqgIplpRGbJLsY/edit?usp=sharing)  
 
 ## Gameplay Explanation ##
@@ -73,9 +73,20 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Add an entry for each platform or input style your project supports.**
 
-## Movement/Physics
+## Movement/Physics [ Ethan Nguyen ]
 
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
+I made several adjustments and additions to the movement and physics mechanics to match the horror-themed atmosphere:
+
+- **Player Movement Input Map**: I added a player input map for movement, providing more control and flexibility over how the player can move through the game environment.
+  
+- **Player Physics Movement Mechanic**: I implemented a custom physics movement system for the player, which causes the player to move slowly, enhancing the horror element of the game by making the player feel vulnerable and deliberate in their actions.
+
+- **Dash Mechanic**: I introduced a dash mechanic, activated by the "spacebar" input. This allows the player to quickly cover short distances, adding a sense of urgency when trying to escape from threats.
+
+- **Boss Movements**: I implemented boss movements where the boss constantly pursues the player, creating a feeling of tension and danger.
+
+- **Adjusted Boss Speed**: I adjusted the boss's movement speed so it accelerates when it's farther away from the player and slows down when it's closer. This creates a more dynamic and challenging encounter as the player tries to avoid being caught.
+
 
 ## Animation and Visuals
 
@@ -107,11 +118,24 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
-## Press Kit and Trailer
+## Press Kit and Trailer [ Ethan Nguyen ]
 
-**Include links to your presskit materials and trailer.**
+- **Recording and Editing Clips**: I recorded clips from our finished game and imported them into CapCut for editing. I carefully selected gameplay footage to represent the most exciting and engaging parts of the game.
 
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
+- **Trailer Creation**: I adjusted the clips and added transitions to fit a trailor theme, ensuring the video had a dynamic and exciting flow. I made sure the transitions highlighted key moments in the game, such as interactions with objects, player movement, and boss encounters.
+
+- **Game Representation**: I ensured that the trailer clips accurately represented the core gameplay, showing off the player's movement, boss behavior, and interactive objects. This helps to convey the unique experience our game offers.
+
+- **Press Kit Website**: I created a press kit website using GitHub Pages. The website redirects to all relevant game materials, providing easy access.
+
+- **HTML Page for Game Description**: I designed an HTML page that offers a detailed description of our game, its concept, and the inspiration behind it. The page also includes images that showcase our progress.
+
+- **[Watch the Official Game Trailer](https://drive.google.com/file/d/1AhtO4uz6NmKRa44NaspjD5EEgT1YOxGc/view?usp=sharing)**  
+  *The Shadow That Follows* cinematic trailer
+
+- **[Explore the Press Kit](https://andrew-fojas.github.io/The-Shadow-That-Follows/)**  
+  Dive into development insight
+
 
 ## Game Feel and Polish
 
