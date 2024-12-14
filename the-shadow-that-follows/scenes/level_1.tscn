@@ -296,6 +296,7 @@ position = Vector2(10, 158)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+color = Color(0, 0, 0, 1)
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(212, 22)
@@ -309,6 +310,8 @@ shape = SubResource("RectangleShape2D_0xe60")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("5_t6f1d")]
 animation = &"reaper_attack_running"
+frame = 0
+frame_progress = 0.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="Enemy"]
 path_postprocessing = 1

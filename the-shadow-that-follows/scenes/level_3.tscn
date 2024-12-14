@@ -322,6 +322,7 @@ position = Vector2(-86, 309)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+color = Color(0, 0, 0, 1)
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(-280, 907)

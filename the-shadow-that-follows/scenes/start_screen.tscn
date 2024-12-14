@@ -124,5 +124,7 @@ position = Vector2(591, 307)
 [node name="Sound" parent="." instance=ExtResource("4_lkjpg")]
 
 [connection signal="button_down" from="StartGame" to="." method="_on_start_game_button_down"]
+[connection signal="mouse_entered" from="StartGame" to="." method="_on_start_game_mouse_entered"]
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="button_down" from="QuitGame" to="." method="_on_quit_game_button_down"]
+[connection signal="mouse_entered" from="QuitGame" to="." method="_on_quit_game_mouse_entered"]

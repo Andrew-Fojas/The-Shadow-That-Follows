@@ -140,5 +140,7 @@ position = Vector2(576, 326)
 [node name="Sound" parent="." instance=ExtResource("4_sj6i6")]
 
 [connection signal="button_down" from="PlayAgain" to="." method="_on_start_game_button_down"]
+[connection signal="mouse_entered" from="PlayAgain" to="." method="_on_play_again_mouse_entered"]
 [connection signal="pressed" from="PlayAgain" to="." method="_on_start_game_pressed"]
 [connection signal="button_down" from="QuitGame" to="." method="_on_quit_game_button_down"]
+[connection signal="mouse_entered" from="QuitGame" to="." method="_on_quit_game_mouse_entered"]

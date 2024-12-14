@@ -294,6 +294,7 @@ position = Vector2(121, -1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+color = Color(0, 0, 0, 1)
 
 [node name="Enemy" type="CharacterBody2D" parent="."]
 position = Vector2(392, -112)
@@ -303,6 +304,8 @@ script = ExtResource("8_8olqd")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("9_i1k13")]
 animation = &"reaper_attack_running"
+frame = 0
+frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0, 1.09673e-05)

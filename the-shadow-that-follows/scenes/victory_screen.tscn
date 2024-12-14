@@ -64,7 +64,7 @@ leaving behind the darkness of the facility.
 Will your past haunt you again?"
 horizontal_alignment = 1
 
-[node name="Play Again" type="Button" parent="."]
+[node name="PlayAgain" type="Button" parent="."]
 top_level = true
 layout_mode = 0
 offset_left = 435.0
@@ -140,6 +140,8 @@ position = Vector2(576, 326)
 
 [node name="Sound" parent="." instance=ExtResource("4_2gyh7")]
 
-[connection signal="button_down" from="Play Again" to="." method="_on_start_game_button_down"]
-[connection signal="pressed" from="Play Again" to="." method="_on_start_game_pressed"]
+[connection signal="button_down" from="PlayAgain" to="." method="_on_start_game_button_down"]
+[connection signal="mouse_entered" from="PlayAgain" to="." method="_on_play_again_mouse_entered"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_start_game_pressed"]
 [connection signal="button_down" from="QuitGame" to="." method="_on_quit_game_button_down"]
+[connection signal="mouse_entered" from="QuitGame" to="." method="_on_quit_game_mouse_entered"]
