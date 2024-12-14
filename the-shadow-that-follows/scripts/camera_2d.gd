@@ -3,7 +3,7 @@ extends Camera2D
 @export var total_time: float = 60.0
 
 var time_remaining: float = 0.0
-var level_times : Array = [30.0, 60.0, 180.0]
+var level_times : Array = [30.0, 60.0]
 
 @onready var timer_label: Label = $TimerLabel
 
@@ -36,8 +36,8 @@ func update_timer_display():
 	var seconds : float = floor(fmod(time_remaining, 60))
 	timer_label.text = "%02d:%02d" % [minutes, seconds]
 	# Change color as time gets low
-	if time_remaining <= 10:
-		timer_label.add_theme_color_override("font_color", Color.WHITE)
+	if time_remaining <= 11:
+		timer_label.add_theme_color_override("font_color", Color.DARK_RED)
 
 func game_over():
 	GameData.current_level = 0

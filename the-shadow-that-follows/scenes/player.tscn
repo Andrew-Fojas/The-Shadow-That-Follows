@@ -375,20 +375,22 @@ sprite_frames = SubResource("SpriteFrames_410f2")
 animation = &"idle"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-6, 8)
-zoom = Vector2(7, 7)
+position = Vector2(-7, 10)
+zoom = Vector2(5, 5)
 script = ExtResource("5_gdpmr")
 
 [node name="TimerLabel" type="Label" parent="Camera2D"]
+light_mask = 3
+visibility_layer = 3
 texture_filter = 2
-offset_left = 55.0
-offset_top = 23.0
-offset_right = 86.0
-offset_bottom = 46.0
+offset_left = 85.0
+offset_top = 38.0
+offset_right = 118.0
+offset_bottom = 61.0
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("6_eo4qp")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 18
 text = "00:00"
