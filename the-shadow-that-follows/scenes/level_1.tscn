@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://g2tmg4td5b1x"]
 
-[ext_resource type="Script" path="res://scripts/level_1.gd" id="1_lwq0i"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_lwq0i"]
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_mlqf1"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="2_rampw"]
 [ext_resource type="Texture2D" uid="uid://coy2yntwf0lt4" path="res://assets/blood/bloodsplat_1.png" id="2_w6ime"]
@@ -293,6 +293,7 @@ position = Vector2(10, 158)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+color = Color(0, 0, 0, 1)
 
 [node name="SpikeTraps" type="Node" parent="."]
 

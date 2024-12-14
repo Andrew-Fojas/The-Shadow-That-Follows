@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://sfw40uso165j"]
 
 [ext_resource type="Texture2D" uid="uid://dai3dmkige25l" path="res://assets/Tileset_Large.png" id="1_4sopn"]
-[ext_resource type="Script" path="res://scripts/level_2.gd" id="1_8mesm"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_g5dgt"]
 [ext_resource type="Texture2D" uid="uid://coy2yntwf0lt4" path="res://assets/blood/bloodsplat_1.png" id="2_01joc"]
 [ext_resource type="PackedScene" uid="uid://bkek1m8avaq7m" path="res://scenes/player.tscn" id="2_ccx4i"]
 [ext_resource type="PackedScene" uid="uid://b48xrusaxaov2" path="res://scenes/spike_trap.tscn" id="2_jxgoa"]
@@ -264,7 +264,7 @@ size = Vector2(2, 48)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7xwen"]
 
 [node name="Level2" type="Node2D"]
-script = ExtResource("1_8mesm")
+script = ExtResource("1_g5dgt")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_4d2rc")
@@ -291,6 +291,7 @@ position = Vector2(157, 4)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 scale = Vector2(1, 0.407709)
+color = Color(0, 0, 0, 1)
 
 [node name="SpikeTraps" type="Node" parent="."]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://csl8b5oooomy8"]
 
-[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_7vdi5"]
+[ext_resource type="Script" path="res://scripts/menu_screen.gd" id="1_7vdi5"]
 [ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="1_ggpcp"]
 [ext_resource type="Texture2D" uid="uid://byiry1b0gy2dk" path="res://assets/start_background.png" id="2_2ne6v"]
 [ext_resource type="PackedScene" uid="uid://fppfqami01fn" path="res://scenes/sound.tscn" id="4_lkjpg"]

@@ -48,6 +48,7 @@ func _ready() -> void:
 	menu_music.play()
 	keyboard_typing.play()
 
+### Typing text functionality from https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s
 # Set text to display in the story scene
 func set_text(new_text: String) -> void:
 	# Set the full text and reset typing variables
@@ -70,6 +71,7 @@ func _on_timer_timeout() -> void:
 		is_typing = false
 		# Stop typing audio when typing is stopped
 		keyboard_typing.stop()
+###
 
 # Continue to the next level when 'spacebar' is pressed
 func _input(event: InputEvent) -> void:

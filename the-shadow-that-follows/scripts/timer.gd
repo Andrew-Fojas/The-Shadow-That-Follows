@@ -1,11 +1,11 @@
-extends Camera2D
+extends CanvasLayer
 
 @export var total_time: float = 60.0
 
 var time_remaining: float = 0.0
 var level_times : Array = [30.0, 60.0]
 
-@onready var timer_label: Label = $TimerLabel
+@onready var timer_label: Label = $"TimerLabel"
 
 func _ready():
 	var current_level = GameData.current_level
