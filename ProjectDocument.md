@@ -53,6 +53,10 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Describe the steps you took in your role as producer. Typical items include group scheduling mechanisms, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, dependency/task tracking, Gantt charts, etc.), and repository management methodology.**
 
+*Main Platform Creation* - I created a discord server to serve as our main communication platform. I set up important channels such as role-related channels, meeting details, documents/assets, and announcements. (Everyone was notified beforehand that class faculty may join to see this server as documentation) [Discord Server Invite](https://discord.gg/v8PDcrHbmF)
+
+*Meeting Scheduling and Notes* - I scheduled meetings in order to keep us on track with our group project. I also created meeting notes for the first few meetings because I felt they were helpful. I also organized meetings for important events like the Progress Report. Further detailed correspondence about meetings can be found in the meetings and general channels on our discord server. [GitHub Meeting Screenshots](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/MeetingDocumentation)
+
 ## User Interface and Input
 
 **Describe your user interface and how it relates to gameplay. This can be done via the template.**
