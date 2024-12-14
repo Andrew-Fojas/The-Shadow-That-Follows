@@ -98,7 +98,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 *Meeting Scheduling and Notes* - I scheduled meetings in order to keep us on track with our group project. I also created meeting notes for the first few meetings because I felt they were helpful. I also organized meetings for important events like the Progress Report. Further detailed correspondence about meetings can be found in the meetings and general channels on our discord server. [GitHub Meeting Screenshots](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/MeetingDocumentation)
 
 
-Below are the detailed implementation tasks I assisted other roles with:
+Below are the detailed implementation tasks I completed:
 
 
 *Torch and Reduced Field of View* - I implemented the small circular field of view with a point light node (circle of what you can see) and a canvasmodulate node (the black space) to increase the tension and horror the player experiences in game. Furthermore, I added the torch mechanic that increases the field of view. I also added the animation and found the sprite for the torch. [Field of View Widening in Player Script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/817211ea36fba4ea056e9399cdf4d92c187469ba/the-shadow-that-follows/scripts/player.gd#L67)
