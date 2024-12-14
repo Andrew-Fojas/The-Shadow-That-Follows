@@ -55,9 +55,21 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Add an entry for each platform or input style your project supports.**
 
-## Movement/Physics
+## Movement/Physics [ Ethan Nguyen ]
 
-**Describe the basics of movement and physics in your game. Is it the standard physics model? What did you change or modify? Did you make your movement scripts that do not use the physics system?**
+I made several adjustments and additions to the movement and physics mechanics to match the horror-themed atmosphere:
+
+- **Player Movement Input Map**: I added a player input map for movement, providing more control and flexibility over how the player can move through the game environment.
+  
+- **Player Physics Movement Mechanic**: I implemented a custom physics movement system for the player, which causes the player to move slowly, enhancing the horror element of the game by making the player feel vulnerable and deliberate in their actions.
+
+- **Dash Mechanic**: I introduced a dash mechanic, activated by the "spacebar" input. This allows the player to quickly cover short distances, adding a sense of urgency when trying to escape from threats.
+
+- **Boss Movements**: I implemented boss movements where the boss constantly pursues the player, creating a feeling of tension and danger.
+
+- **Adjusted Boss Speed**: I adjusted the boss's movement speed so it accelerates when it's farther away from the player and slows down when it's closer. This creates a more dynamic and challenging encounter as the player tries to avoid being caught.
+
+These changes aim to enhance the game's atmosphere and create a more engaging experience for the player, where movement plays a critical role in the tension and gameplay.
 
 ## Animation and Visuals
 
@@ -89,11 +101,14 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
 
-## Press Kit and Trailer
+## Press Kit and Trailer [ Ethan Nguyen ]
 
-**Include links to your presskit materials and trailer.**
+- **[Watch the Official Game Trailer](https://drive.google.com/file/d/1AhtO4uz6NmKRa44NaspjD5EEgT1YOxGc/view?usp=sharing)**  
+  Immerse yourself in the eerie atmosphere of *The Shadow That Follows* with our cinematic trailer
 
-**Describe how you showcased your work. How did you choose what to show in the trailer? Why did you choose your screenshots?**
+- **[Explore the Press Kit](https://andrew-fojas.github.io/The-Shadow-That-Follows/)**  
+  Dive into development insight
+
 
 ## Game Feel and Polish
 
