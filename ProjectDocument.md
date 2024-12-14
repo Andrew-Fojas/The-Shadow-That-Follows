@@ -176,7 +176,7 @@ World-Building:
   Dive into development insight
 
 
-## Game Feel and Polish
+## Game Feel and Polish [Alex Do]
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
 - During development, I tested the game a lot to ensure that everything was smooth, which includes making sure that the transitions, player interactions, and monster behavior are functioning correctly. I made sure to collaborate with the team with any identified issues and resolved them, minimizing the amount of glitches and improving the overall experience.
