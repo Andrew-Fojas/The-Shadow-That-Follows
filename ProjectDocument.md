@@ -23,6 +23,10 @@
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
+[Torch Sprite - Found by Andrew Fojas](https://gianmansuper.itch.io/pixel-torches)
+
+[Heart Sprite - Found by Andrew Fojas](https://gpway.itch.io/2d-pixel-heart?download#google_vignette)
+
 # External Code, Ideas, and Structure #
 
 If your project contains code that: 1) your team did not write, and 2) does not fit cleanly into a role, please document it in this section. Please include the author of the code, where to find the code, and note which scripts, folders, or other files that comprise the external contribution. Additionally, include the license for the external code that permits you to use it. You do not need to include the license for code provided by the instruction team.
@@ -30,6 +34,16 @@ If your project contains code that: 1) your team did not write, and 2) does not 
 If you used tutorials or other intellectual guidance to create aspects of your project, include reference to that information as well.
 
 [Helped me (Keanu Chau) write the code for typing text effect](https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s)
+
+[Helped me (Andrew Fojas) implement the music/sound effects. Link 1](https://www.youtube.com/watch?v=N6-2Iwb8xoU)
+
+[Helped me (Andrew Fojas) implement the music/sound effects. Link 2](https://www.youtube.com/watch?v=ANUBrcw8ONI)
+
+[Helped me (Andrew Fojas) implement the torch's light mechanic and the reduced Field-of-View](https://www.youtube.com/watch?v=j_FMsL_ru1w)
+
+[(Andrew Fojas) Found this video for creating map boundaries](https://www.youtube.com/watch?v=GiZuWjXmvcc)
+
+
 
 # Main Roles #
 
@@ -44,9 +58,13 @@ Here is an example:
 
 You should replay any **bold text** with your relevant information. Liberally use the template when necessary and appropriate.
 
-## Producer
+## Producer - Andrew Fojas
 
 **Describe the steps you took in your role as producer. Typical items include group scheduling mechanisms, links to meeting notes, descriptions of team logistics problems with their resolution, project organization tools (e.g., timelines, dependency/task tracking, Gantt charts, etc.), and repository management methodology.**
+
+*Main Platform Creation* - I created a discord server to serve as our main communication platform. I set up important channels such as role-related channels, meeting details, documents/assets, and announcements. (Everyone was notified beforehand that class faculty may join to see this server as documentation) [Discord Server Invite](https://discord.gg/v8PDcrHbmF)
+
+
 
 ## User Interface and Input
 
@@ -79,7 +97,7 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 **Document the sound style.** 
 
-## Gameplay Testing
+## Gameplay Testing - Andrew Fojas
 
 **Add a link to the full results of your gameplay tests.**
 
