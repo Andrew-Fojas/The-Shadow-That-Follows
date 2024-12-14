@@ -23,17 +23,25 @@
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
-# Ethan Nguyen
-- **Boss Animations and Sprites**: I added animations and sprites for the boss from our selection, helping to bring the boss to life and make encounters more dynamic and engaging.
+## Ethan Nguyen
+*  Boss Animations and Sprites**: I added animations and sprites for the boss from our selection, helping to bring the boss to life and make encounters more dynamic and engaging.
 
-- **Player Animations**: I successfully implemented them into the player’s movement system, altough I did not find the assests for it.
+*  Player Animations**: I successfully implemented them into the player’s movement system, altough I did not find the assests for it.
 
-- **Boss Attack Mechanics**: I implemented the boss attack mechanics, where the boss triggers an attack animation when getting close to the player. When it gets even closer, the boss physically attacks the player, adding a sense of danger and urgency during encounters.
+*  Boss Attack Mechanics**: I implemented the boss attack mechanics, where the boss triggers an attack animation when getting close to the player. When it gets even closer, the boss physically attacks the player, adding a sense of danger and urgency during encounters.
 
-- **GitHub Conflict Assistance**: I helped resolve several GitHub conflicts this included merging branches and fixing issues that arose when multiple team members were working on the same files.
+*  GitHub Conflict Assistance**: I helped resolve several GitHub conflicts this included merging branches and fixing issues that arose when multiple team members were working on the same files.
 
-- **Added Camera Mechanics**: I implemented the focus point camera logic that was inspired from execise 2. This gave the game a more eerie feeling. 
+*  Added Camera Mechanics**: I implemented the focus point camera logic that was inspired from execise 2. This gave the game a more eerie feeling. 
 
+## Keanu Chau
+*   Moved scenes/nodes that weren't in the player scene and moved them to the player scene so the project was more organized with less scenes/nodes.
+  
+*   Changed player camera view to widen view and improve game feel.
+
+*   Added more spike traps to all levels.
+
+*   Changed boss collision mask so that it could pass thorough borders and not get stuck.
 
 # External Code, Ideas, and Structure #
 
@@ -66,12 +74,17 @@ You should replay any **bold text** with your relevant information. Liberally us
 
 *Meeting Scheduling and Notes* - I scheduled meetings in order to keep us on track with our group project. I also created meeting notes for the first few meetings because I felt they were helpful. I also organized meetings for important events like the Progress Report. Further detailed correspondence about meetings can be found in the meetings and general channels on our discord server. [GitHub Meeting Screenshots](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/MeetingDocumentation)
 
-## User Interface and Input
+## User Interface and Input: Keanu Chau
 
-**Describe your user interface and how it relates to gameplay. This can be done via the template.**
-**Describe the default input configuration.**
+*   I created the start_screen, game_over_screen, victory_screen, and story_screen (shows the narrative). The menu screens (start_screen, game_over_screen, victory_screen) where all very simple. I added a background for all of them and buttons (Start Game, Quit Game, Play Again). A [script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/3e6217138df0e2ac3d0204ed86099e23a022cc40/the-shadow-that-follows/scripts/menu_screen.gd#L1) is reused for the menu screens that dictate the transitions for the button presses and also the audio when hovering a button. I used the Inspector for all the stylisitc elements as that was the easiest method.
 
-**Add an entry for each platform or input style your project supports.**
+*   For the story_screen, I first created my narrative for all 3 levels. Then I created the scene using a simple background and a label to show the narrative. At first, I had created a script where I could test the transitions between the 3 different narratives and levels so it could correctly show the right narrative. The [script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/60379c706368ea5fb2c54ae11fbad38c90fff96a/the-shadow-that-follows/scripts/story_screen.gd#L1) is largely unchanged except some made by Alex Do to help with the transitions of all different scenes. For the typing text effect, I searched for a [YouTube video](https://www.youtube.com/watch?v=WVGAErOd3Z0&t=377s) that helped me implement it. I made it so that you could also press the spacebar to skip the narrative (since it can become annoying, especially after dying). I also added the audio for the typing text (it stops early in the itch.io version for some reason).
+
+*   I also added the timer for time pressure while playing each level. At first, I attached it directly to the player's camera but then realized that the CanvasModulate of each level makes the timer invisible since it darkens the whole view. So, I added a CanvasLayer to the Player and then attached the TimerLabel to that so it could always be visible. The [script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/60379c706368ea5fb2c54ae11fbad38c90fff96a/the-shadow-that-follows/scripts/timer.gd#L1) for the Timer was not hard, as it just counted down the time. I did use ChatGPT to help me [format the time](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/60379c706368ea5fb2c54ae11fbad38c90fff96a/the-shadow-that-follows/scripts/timer.gd#L37).
+
+*   For the dash_bar for the dash movement of the player, I used a ProgressBar inside a Node with a [script](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/60379c706368ea5fb2c54ae11fbad38c90fff96a/the-shadow-that-follows/scripts/dash_bar.gd#L1). Creating the [stylistic](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/60379c706368ea5fb2c54ae11fbad38c90fff96a/the-shadow-that-follows/scripts/dash_bar.gd#L17) part of the bar in code was hard, but after that, I got the cooldown_timer from the player script made by Ethan Nguyen to update the ProgressBar.
+
+*   As input in this game is very simple, Ethan Nguyen mainly implemented the movement and WASD + Arrow keys for it. The spacebar for dash movement and skipping narratives was choice we both made.
 
 ## Movement/Physics [ Ethan Nguyen ]
 
@@ -114,9 +127,9 @@ I made several adjustments and additions to the movement and physics mechanics t
 
 **Summarize the key findings from your gameplay tests.**
 
-## Narrative Design
+## Narrative Design: Keanu Chau
 
-**Document how the narrative is present in the game via assets, gameplay systems, and gameplay.** 
+*   For my narratives, I had freedom to create a story however I wanted. I wanted to create a traumatic feeling, as I felt that was best for the experience of our game. i decided that the player would be a mentally ill individual that has been admitted to a mental facility. Now, the character feels the presence of it's trauma (shadow) again. The narrative also scales up in scariness as the levels get harder and harder. I tried to add as many scary adjectives as possible and I'm happy with the result of the narrative. All of the narrative aspects of the game are in the story_screens in between levels, as i thought that any narrative while playing the level would distract from that eerie feeling that one gets.
 
 ## Press Kit and Trailer [ Ethan Nguyen ]
 
