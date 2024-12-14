@@ -32,6 +32,8 @@
 
 - **GitHub Conflict Assistance**: I helped resolve several GitHub conflicts this included merging branches and fixing issues that arose when multiple team members were working on the same files.
 
+- **Added Camera Mechanics**: I implemented the focus point camera logic that was inspired from execise 2. This gave the game a more eerie feeling. 
+
 
 # External Code, Ideas, and Structure #
 
@@ -81,7 +83,7 @@ I made several adjustments and additions to the movement and physics mechanics t
 
 - **Dash Mechanic**: I introduced a dash mechanic, activated by the "spacebar" input. This allows the player to quickly cover short distances, adding a sense of urgency when trying to escape from threats.
 
-- **Boss Movements**: I implemented boss movements where the boss constantly pursues the player, creating a feeling of tension and danger.
+- **Boss Movements**: I implemented boss movements where the boss constantly pursues the player, creating a feeling of tension and danger. This was inspired from excerise 1, where we implemented a follower logic gdscript. 
 
 - **Adjusted Boss Speed**: I adjusted the boss's movement speed so it accelerates when it's farther away from the player and slows down when it's closer. This creates a more dynamic and challenging encounter as the player tries to avoid being caught.
 
