@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cnem52ynumfbo"
-path="res://.godot/imported/spike_impale.wav-73da347fcbb366bc05e118966a6d70a5.sample"
+path="res://.godot/imported/spike_impale.wav-36dc2c6d89c637fe34867a3859992617.sample"
 
 [deps]
 
-source_file="res://assets/Audio/spike_impale.wav"
-dest_files=["res://.godot/imported/spike_impale.wav-73da347fcbb366bc05e118966a6d70a5.sample"]
+source_file="res://assets/Audio/SFX/spike_impale.wav"
+dest_files=["res://.godot/imported/spike_impale.wav-36dc2c6d89c637fe34867a3859992617.sample"]
 
 [params]
 
