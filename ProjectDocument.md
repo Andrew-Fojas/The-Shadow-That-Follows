@@ -114,9 +114,17 @@ Graphic Design:
 World-Building:
 - Along with the use of a montone color pallate for the tilemap, the levels and decoration contribute to the narrative. The first two levels contain much more decoration and furniture fit for a home, such as bedrooms, a living room, kitchen, etc. However, as we reach the third level, the overall layout becomes more dull and lifeless. This shift reflects the player's descent into psychological warfare, transitioning from a place of comfort and familiarity to an unsettling, unknown environment.
 
-## Game Logic
+## Game Logic [Alex Do]
 
 **Document the game states and game data you managed and the design patterns you used to complete your task.**
+
+- Developed the original game’s purpose, goals, and mechanics. This includes planning how the player navigates through a horror maze and escapes a mental facility while avoiding traps and a monster. I outlined the game flow (e.g., main screen → narrative → levels → victory/game-over screens) and set rules like losing hearts to traps or dying instantly from the monster.
+
+- After determining the logic for how players interact with borders, traps, obstacles, and the monster, I implemented event triggers to ensure smooth transitions and progression throughout the game. For example, reaching an exit zone transitions players to the next narrative cutscene, followed by the next level.
+
+- I shared the game logic with my group, and we collaborated to refine it, ensuring we all agreed. We came to the consensus of including a black border for limited visibility, interactive items like a torch, a dash ability, and a timer for increased difficulty. These adjustments finalized the gameplay foundation.
+
+- To implement the transitions, I created an Area2D exit zone and attached a transition_zone.gd script that triggered level progression. To resolve level reset issues, I developed a global gamedata.gd script to track progress and ensure reliable transitions to game-over states when players failed.
 
 # Sub-Roles
 
@@ -171,3 +179,8 @@ World-Building:
 ## Game Feel and Polish
 
 **Document what you added to and how you tweaked your game to improve its game feel.**
+- During development, I tested the game a lot to ensure that everything was smooth, which includes making sure that the transitions, player interactions, and monster behavior are functioning correctly. I made sure to collaborate with the team with any identified issues and resolved them, minimizing the amount of glitches and improving the overall experience.
+
+- To enhance the horror atmosphere, I asked volunteers to playtest the game and provided feedback, based on their reactions or verbal interactions. I focused on whether players felt tense and immersed in the eerie environment. Based on their input, I identified ways to improve, such as adding audio effects to increase spookiness, and worked with the team to implement these adjustments.
+
+
