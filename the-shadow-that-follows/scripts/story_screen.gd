@@ -3,6 +3,7 @@ extends Control
 @export var typing_speed: float = 0.03 # Time delay between characters
 @onready var text_label: Label = $TextLabel
 @onready var menu_music = $Sound/MenusMusic
+@onready var keyboard_typing: AudioStreamPlayer2D = $Sound/KeyboardTyping
 
 var full_text: String = ""
 var current_char_index: int = 0
@@ -45,6 +46,7 @@ func _ready() -> void:
 	if GameData.current_level < _narratives.size():
 		set_text(_narratives[GameData.current_level])
 	menu_music.play()
+	keyboard_typing.play()
 
 # Set text to display in the story scene
 func set_text(new_text: String) -> void:
@@ -62,12 +64,12 @@ func _on_timer_timeout() -> void:
 	if current_char_index < full_text.length():
 		text_label.text += full_text[current_char_index]
 		current_char_index += 1
-		if has_node("AudioStreamPlayer"):
-			$AudioStreamPlayer.play()
 	else:
 		# Stop typing once the text is fully displayed
 		$Timer.stop()
 		is_typing = false
+		# Stop typing audio when typing is stopped
+		keyboard_typing.stop()
 
 # Continue to the next level when 'spacebar' is pressed
 func _input(event: InputEvent) -> void:
@@ -77,6 +79,8 @@ func _input(event: InputEvent) -> void:
 			$Timer.stop()
 			text_label.text = full_text
 			is_typing = false
+			# Stop typing audio when typing is stopped
+			keyboard_typing.stop()
 		else:
 			# Transition to the next scene
 			if GameData.current_level < _levels.size():

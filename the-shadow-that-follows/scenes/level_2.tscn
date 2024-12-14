@@ -13,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://ho6hq6tqu4eb" path="res://assets/blood/blood_6.png" id="7_b6n3c"]
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="8_8olqd"]
 [ext_resource type="PackedScene" uid="uid://c7s6ttwx6me83" path="res://scenes/torch.tscn" id="9_2eq6q"]
-[ext_resource type="PackedScene" uid="uid://digllimkqy0cr" path="res://scenes/boss_monster.tscn" id="9_i1k13"]
+[ext_resource type="PackedScene" path="res://scenes/boss_monster.tscn" id="9_i1k13"]
 [ext_resource type="Script" path="res://scripts/transition_zone.gd" id="10_bqii3"]
 [ext_resource type="Texture2D" uid="uid://bctpvs8yaj5gd" path="res://assets/Pixel Heart/hearts/heartsh.png" id="13_g72fg"]
-[ext_resource type="PackedScene" uid="uid://e8rceqj7yyw1" path="res://scenes/sound.tscn" id="17_uoove"]
+[ext_resource type="PackedScene" uid="uid://fppfqami01fn" path="res://scenes/sound.tscn" id="17_uoove"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xe22b"]
 texture = ExtResource("1_4sopn")
@@ -303,8 +303,6 @@ script = ExtResource("8_8olqd")
 
 [node name="BossMonster" parent="Enemy" instance=ExtResource("9_i1k13")]
 animation = &"reaper_attack_running"
-frame = 0
-frame_progress = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy"]
 position = Vector2(0, 1.09673e-05)

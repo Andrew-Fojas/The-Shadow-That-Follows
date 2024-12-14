@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_w8uks"]
 [ext_resource type="FontFile" uid="uid://dhaqca1njc1oj" path="res://assets/poco-font/Poco.ttf" id="2_c0owu"]
 [ext_resource type="Texture2D" uid="uid://cpck062yr5bbi" path="res://assets/victory-background.png" id="3_75kc0"]
-[ext_resource type="PackedScene" uid="uid://e8rceqj7yyw1" path="res://scenes/sound.tscn" id="4_sj6i6"]
+[ext_resource type="PackedScene" uid="uid://fppfqami01fn" path="res://scenes/sound.tscn" id="4_sj6i6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_prp81"]
 
