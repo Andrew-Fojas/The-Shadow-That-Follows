@@ -23,14 +23,6 @@
 
 **Add it here if you did work that should be factored into your grade but does not fit easily into the proscribed roles! Please include links to resources and descriptions of game-related material that does not fit into roles here.**
 
-# Ethan Nguyen
-- **Boss Animations and Sprites**: I added animations and sprites for the boss from our selection, helping to bring the boss to life and make encounters more dynamic and engaging.
-
-- **Player Animations**: Although I didn’t find the assets for the player animations, I successfully implemented them into the player’s movement system. This added fluidity and visual appeal to the character’s actions.
-
-- **Boss Attack Mechanics**: I implemented the boss attack mechanics, where the boss triggers an attack animation when getting close to the player. When it gets even closer, the boss physically attacks the player, adding a sense of danger and urgency during encounters.
-
-- **GitHub Conflict Assistance**: I helped resolve several GitHub conflicts, ensuring smooth collaboration and version control throughout the development process. This included merging branches and fixing issues that arose when multiple team members were working on the same files.
 
 
 
