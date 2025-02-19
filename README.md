@@ -149,7 +149,7 @@ World-Building:
 
 - To implement the transitions, I created an Area2D exit zone and attached a transition_zone.gd script that triggered level progression. To resolve level reset issues, I developed a global gamedata.gd script to track progress and ensure reliable transitions to game-over states when players failed.
 
-# Sub-Roles
+# Sub-Role Documentation
 
 ## Audio [Jhaydine Bandola]
 
