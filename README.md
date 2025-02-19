@@ -70,7 +70,7 @@
 
 # Main Role Documentation #
 
-## Producer
+## Producer : Andrew Fojas
 
 *Main Platform Creation* - I created a discord server to serve as our main platform for all things related to the server. I set up important channels such as role-related channels, meeting details, documents/assets, and announcements. (Everyone was notified beforehand that class faculty may join to see this server as documentation) [Discord Server Invite](https://discord.gg/v8PDcrHbmF)
 
