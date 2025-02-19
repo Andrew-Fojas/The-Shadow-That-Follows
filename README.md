@@ -76,8 +76,6 @@
 
 *Task Dependency Chart* - I created a Dependency Chart of important tasks for everyone to look at to see big-picture what we needed to get done in the time we had for the project. [Dependency Chart in Github](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/main/ProducerMaterials/Task_Flowchart.jpg)
 
-*Task Dependency Chart* - I created a Dependency Chart of important tasks for everyone to look at to see big-picture what we needed to get done in the time we had for the project. [Dependency Chart in Github](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/blob/main/ProducerMaterials/Task_Flowchart.jpg)
-
 *Team Logistics and Task Reassignment* - I assisted in resolving git conflicts and push/pulling from github when members requested help (I did moreso in person but was able to assist online via discord as well). I took over certain tasks of other roles when they asked for assistance. If I felt I did not have the resources/time to be able to immediately help someone, I coordinated efforts in our group to get other teammates to help [Logistics and Support Examples](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/TaskAssistance)
 
 *Meeting Scheduling and Notes* - I scheduled meetings in order to keep us on track with our group project. I also created meeting notes for the first few meetings because I felt they were helpful. I also organized meetings for important events like the Progress Report. Further detailed correspondence about meetings can be found in the meetings and general channels on our discord server. [GitHub Meeting Screenshots](https://github.com/Andrew-Fojas/The-Shadow-That-Follows/tree/main/ProducerMaterials/MeetingDocumentation)
